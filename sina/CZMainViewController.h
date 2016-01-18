@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CZMainViewController.h
 //  sina
 //
 //  Created by Joseph on 16/1/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CZMainViewController : UIViewController
 
 @end
-
