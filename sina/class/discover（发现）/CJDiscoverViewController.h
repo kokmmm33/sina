@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CZDiscoverViewController : UIViewController
+@interface CJDiscoverViewController : UIViewController
 
 @end

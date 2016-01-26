@@ -1,22 +1,23 @@
 //
-//  CZDiscoverViewController.m
+//  CZMessageViewController.m
 //  sina
 //
 //  Created by Joseph on 16/1/18.
 //  Copyright © 2016年 运来. All rights reserved.
 //
 
-#import "CZDiscoverViewController.h"
+#import "CJMessageViewController.h"
 
-@interface CZDiscoverViewController ()
+@interface CJMessageViewController ()
 
 @end
 
-@implementation CZDiscoverViewController
+@implementation CJMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor darkGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,6 +10,8 @@
 
 @interface UIImage (CZRenderImage)
 
-+(instancetype)imageWithOriginalImage:(NSString *)imageName;
++(UIImage *)imageWithOriginalImage:(NSString *)imageName;
+
++(UIImage *)imageWithStrectchable:(NSString *)imageName;
 
 @end

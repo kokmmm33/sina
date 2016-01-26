@@ -1,5 +1,5 @@
 //
-//  CZMessageViewController.h
+//  CZProFileViewController.h
 //  sina
 //
 //  Created by Joseph on 16/1/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CZMessageViewController : UIViewController
+@interface CJProFileViewController : UIViewController
 
 @end

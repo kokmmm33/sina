@@ -1,18 +1,18 @@
 //
-//  CZProFileViewController.m
+//  CJNavigationController.m
 //  sina
 //
-//  Created by Joseph on 16/1/18.
+//  Created by Joseph on 16/1/20.
 //  Copyright © 2016年 运来. All rights reserved.
 //
 
-#import "CZProFileViewController.h"
+#import "CJNavigationController.h"
 
-@interface CZProFileViewController ()
+@interface CJNavigationController ()
 
 @end
 
-@implementation CZProFileViewController
+@implementation CJNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

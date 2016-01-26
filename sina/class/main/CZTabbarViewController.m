@@ -8,45 +8,63 @@
 
 #import "CZTabbarViewController.h"
 
-#import "CZProFileViewController.h"
-#import "CZMessageViewController.h"
+#import "CJProFileViewController.h"
+#import "CJMessageViewController.h"
 #import "CZMainViewController.h"
-#import "CZDiscoverViewController.h"
+#import "CJDiscoverViewController.h"
 
 #import "UIImage+CZRenderImage.h"
 
-#import "CZTabbar.h"
+#import "CJNavigationController.h"
+#import "CJTabBar.h"
 #import <objc/message.h>
 
-@interface CZTabbarViewController ()
+@interface CZTabbarViewController ()<CJCJTabBarDelegate>
+
+@property(nonatomic,strong)NSMutableArray *items;
 
 @end
 
 @implementation CZTabbarViewController
 
-
-+(void)initialize
+-(NSMutableArray *)items
 {
-    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
-    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    attributes[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    
-    [item setTitleTextAttributes:attributes forState:UIControlStateSelected];
-
-
+    if (_items == nil) {
+        _items = [NSMutableArray array];
+        
+    }
+    return _items;
 }
+
+
+//+(void)initialize
+//{
+//    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+//    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+//    attributes[NSForegroundColorAttributeName] = [UIColor orangeColor];
+//    
+//    [item setTitleTextAttributes:attributes forState:UIControlStateSelected];
+//
+//}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    CZTabbar *tabbar = [[CZTabbar alloc]initWithFrame:self.tabBar.frame];
-    //[self setValue:tabbar forKeyPath:@"tabBar"];
-    objc_msgSend(self, @selector(setTabBar:),tabbar);
-    
-    NSLog(@"%@",self.tabBar);
-    
+
     [self setAllChildViewController];
+    
+    
+    CJTabBar *tabbar = [[CJTabBar alloc]initWithFrame:self.tabBar.frame];
+    
+    tabbar.items = self.items;
+    
+    tabbar.delegate = self;
+    //[self setValue:tabbar forKeyPath:@"tabBar"];
+    //    objc_msgSend(self, @selector(setTabBar:),tabbar);
+    
+    [self.view addSubview:tabbar];
+    
+    [self.tabBar removeFromSuperview];
 
 }
 
@@ -62,15 +80,15 @@
     CZMainViewController *main = [[CZMainViewController alloc]init];
     [self setOneChildViewController:main image:[UIImage imageNamed:@"tabbar_home"] selectImage:[UIImage imageWithOriginalImage:@"tabbar_home_selected"] title:@"首页"];
     
-    CZMessageViewController *message = [[CZMessageViewController alloc]init];
+    CJMessageViewController *message = [[CJMessageViewController alloc]init];
     [self setOneChildViewController:message image:[UIImage imageNamed:@"tabbar_message_center"] selectImage:[UIImage imageWithOriginalImage:@"tabbar_message_center_selected"] title:@"消息"];
      
      
      
-    CZDiscoverViewController *discover = [[CZDiscoverViewController alloc]init];
+    CJDiscoverViewController *discover = [[CJDiscoverViewController alloc]init];
     [self setOneChildViewController:discover image:[UIImage imageNamed:@"tabbar_discover"] selectImage:[UIImage imageWithOriginalImage:@"tabbar_discover_selected"] title:@"发现"];
     
-    CZProFileViewController *profile = [[CZProFileViewController alloc]init];
+    CJProFileViewController *profile = [[CJProFileViewController alloc]init];
     [self setOneChildViewController:profile image:[UIImage imageNamed:@"tabbar_profile"] selectImage:[UIImage imageWithOriginalImage:@"tabbar_profile_selected"] title:@"我"];
 
 }
@@ -81,11 +99,21 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = selectImage;
-
     
-    [self addChildViewController:vc];
+    CJNavigationController *nav = [[CJNavigationController alloc]initWithRootViewController:vc];
+    
+    
+    [self.items addObject:vc.tabBarItem];
+    
+    [self addChildViewController:nav];
 
 
+}
+
+-(void)tabBar:(CJTabBar *)tabBar didClickBarButton:(NSInteger)index
+{
+    NSLog(@"%s",__func__);
+    self.selectedIndex = index;
 }
 /*
 #pragma mark - Navigation
