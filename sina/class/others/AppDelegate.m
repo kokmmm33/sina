@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "CZTabbarViewController.h"
+#import "CJTabbarViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    CZTabbarViewController *tabbarVC = [[CZTabbarViewController alloc]init];
+    CJTabbarViewController *tabbarVC = [[CJTabbarViewController alloc]init];
     self.window.rootViewController = tabbarVC;
     
     [self.window makeKeyAndVisible];

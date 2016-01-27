@@ -1,24 +1,24 @@
 //
-//  CZProFileViewController.m
+//  CJPopController.m
 //  sina
 //
-//  Created by Joseph on 16/1/18.
+//  Created by Joseph on 16/1/26.
 //  Copyright © 2016年 运来. All rights reserved.
 //
 
-#import "CJProFileViewController.h"
+#import "CJPopController.h"
 
-@interface CJProFileViewController ()
+@interface CJPopController ()
 
 @end
 
-@implementation CJProFileViewController
+@implementation CJPopController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
-    self.title = @"我";
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

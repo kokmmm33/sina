@@ -1,24 +1,24 @@
 //
-//  CZProFileViewController.m
+//  CZMessageViewController.m
 //  sina
 //
 //  Created by Joseph on 16/1/18.
 //  Copyright © 2016年 运来. All rights reserved.
 //
 
-#import "CJProFileViewController.h"
+#import "CJMessageViewController.h"
 
-@interface CJProFileViewController ()
+@interface CJMessageViewController ()
 
 @end
 
-@implementation CJProFileViewController
+@implementation CJMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor yellowColor];
-    self.title = @"我";
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.title = @"消息";
 }
 
 - (void)didReceiveMemoryWarning {

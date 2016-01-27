@@ -7,64 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C43BD7C1C529DDC00B178DB /* CJCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BD7B1C529DDC00B178DB /* CJCover.m */; settings = {ASSET_TAGS = (); }; };
-		7C49C01B1C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49C01A1C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
-		7C49C01E1C524F9A00E9C338 /* CJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C49C01D1C524F9A00E9C338 /* CJTitleButton.m */; settings = {ASSET_TAGS = (); }; };
-		7C53A0511C5269520062CCD5 /* UIView+view.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C53A0501C5269520062CCD5 /* UIView+view.m */; settings = {ASSET_TAGS = (); }; };
 		7C6A3F281C4CCD190053B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6A3F271C4CCD190053B058 /* UIKit.framework */; };
-		7C7851EA1C4FA77300A20AF8 /* CJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7851E91C4FA77300A20AF8 /* CJNavigationController.m */; settings = {ASSET_TAGS = (); }; };
-		7CB2F0D01C56763B000F3C12 /* CJPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2F0CF1C56763B000F3C12 /* CJPopMenu.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673EE1C4E968B00F9F1C1 /* CJDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673D81C4E968B00F9F1C1 /* CJDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673EF1C4E968B00F9F1C1 /* CZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673DB1C4E968B00F9F1C1 /* CZMainViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F01C4E968B00F9F1C1 /* CZTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673DE1C4E968B00F9F1C1 /* CZTabbar.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F11C4E968B00F9F1C1 /* CZTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673E01C4E968B00F9F1C1 /* CZTabbarViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F21C4E968B00F9F1C1 /* CJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673E31C4E968B00F9F1C1 /* CJMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F31C4E968B00F9F1C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673E61C4E968B00F9F1C1 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F41C4E968B00F9F1C1 /* UIImage+CZRenderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673E91C4E968B00F9F1C1 /* UIImage+CZRenderImage.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F51C4E968B00F9F1C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673EA1C4E968B00F9F1C1 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F61C4E968B00F9F1C1 /* CJProFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673ED1C4E968B00F9F1C1 /* CJProFileViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673F91C4EA9D500F9F1C1 /* CJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673F81C4EA9D500F9F1C1 /* CJTabBar.m */; settings = {ASSET_TAGS = (); }; };
-		7CD673FC1C4EB2CD00F9F1C1 /* CJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD673FB1C4EB2CD00F9F1C1 /* CJTabBarButton.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88821C57CFEF00F39B76 /* CJDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88831C57CFEF00F39B76 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88541C57CFEF00F39B76 /* CJMainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88841C57CFEF00F39B76 /* CJCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88581C57CFEF00F39B76 /* CJCover.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88851C57CFEF00F39B76 /* CJPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B885A1C57CFEF00F39B76 /* CJPopMenu.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88861C57CFEF00F39B76 /* CJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B885C1C57CFEF00F39B76 /* CJTitleButton.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88871C57CFEF00F39B76 /* CJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88601C57CFEF00F39B76 /* CJNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88881C57CFEF00F39B76 /* CJTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88621C57CFEF00F39B76 /* CJTabbarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88891C57CFEF00F39B76 /* CJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88661C57CFEF00F39B76 /* CJTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B888A1C57CFEF00F39B76 /* CJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88681C57CFEF00F39B76 /* CJTabBarButton.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B888C1C57CFEF00F39B76 /* CJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B886E1C57CFEF00F39B76 /* CJMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B888D1C57CFEF00F39B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88731C57CFEF00F39B76 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B888E1C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88761C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B888F1C57CFEF00F39B76 /* UIImage+CZRenderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88781C57CFEF00F39B76 /* UIImage+CZRenderImage.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88901C57CFEF00F39B76 /* UIView+view.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B887A1C57CFEF00F39B76 /* UIView+view.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88911C57CFEF00F39B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B887B1C57CFEF00F39B76 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88921C57CFEF00F39B76 /* CJProFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B887E1C57CFEF00F39B76 /* CJProFileViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7C6B88951C57DB3900F39B76 /* CJPopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88941C57DB3900F39B76 /* CJPopController.m */; settings = {ASSET_TAGS = (); }; };
 		7CE8FF8C1C4C2FF6005F0EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8FF8B1C4C2FF6005F0EEE /* Assets.xcassets */; };
 		7CE8FF8F1C4C2FF6005F0EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8FF8D1C4C2FF6005F0EEE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C43BD7A1C529DDC00B178DB /* CJCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCover.h; sourceTree = "<group>"; };
-		7C43BD7B1C529DDC00B178DB /* CJCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCover.m; sourceTree = "<group>"; };
-		7C49C0191C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CJBarButtonItem.h"; sourceTree = "<group>"; };
-		7C49C01A1C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CJBarButtonItem.m"; sourceTree = "<group>"; };
-		7C49C01C1C524F9A00E9C338 /* CJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTitleButton.h; sourceTree = "<group>"; };
-		7C49C01D1C524F9A00E9C338 /* CJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTitleButton.m; sourceTree = "<group>"; };
-		7C53A04F1C5269520062CCD5 /* UIView+view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+view.h"; path = "../../home（首页）/UIView+view.h"; sourceTree = "<group>"; };
-		7C53A0501C5269520062CCD5 /* UIView+view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+view.m"; path = "../../home（首页）/UIView+view.m"; sourceTree = "<group>"; };
 		7C6A3F271C4CCD190053B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7C7851E81C4FA77300A20AF8 /* CJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNavigationController.h; sourceTree = "<group>"; };
-		7C7851E91C4FA77300A20AF8 /* CJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNavigationController.m; sourceTree = "<group>"; };
-		7CB2F0CE1C56763B000F3C12 /* CJPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopMenu.h; sourceTree = "<group>"; };
-		7CB2F0CF1C56763B000F3C12 /* CJPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopMenu.m; sourceTree = "<group>"; };
+		7C6B884D1C57CFEF00F39B76 /* CJDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDiscoverViewController.h; sourceTree = "<group>"; };
+		7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDiscoverViewController.m; sourceTree = "<group>"; };
+		7C6B88531C57CFEF00F39B76 /* CJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
+		7C6B88541C57CFEF00F39B76 /* CJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
+		7C6B88571C57CFEF00F39B76 /* CJCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCover.h; sourceTree = "<group>"; };
+		7C6B88581C57CFEF00F39B76 /* CJCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCover.m; sourceTree = "<group>"; };
+		7C6B88591C57CFEF00F39B76 /* CJPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopMenu.h; sourceTree = "<group>"; };
+		7C6B885A1C57CFEF00F39B76 /* CJPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopMenu.m; sourceTree = "<group>"; };
+		7C6B885B1C57CFEF00F39B76 /* CJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTitleButton.h; sourceTree = "<group>"; };
+		7C6B885C1C57CFEF00F39B76 /* CJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTitleButton.m; sourceTree = "<group>"; };
+		7C6B885F1C57CFEF00F39B76 /* CJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJNavigationController.h; sourceTree = "<group>"; };
+		7C6B88601C57CFEF00F39B76 /* CJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJNavigationController.m; sourceTree = "<group>"; };
+		7C6B88611C57CFEF00F39B76 /* CJTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTabbarViewController.h; sourceTree = "<group>"; };
+		7C6B88621C57CFEF00F39B76 /* CJTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTabbarViewController.m; sourceTree = "<group>"; };
+		7C6B88651C57CFEF00F39B76 /* CJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTabBar.h; sourceTree = "<group>"; };
+		7C6B88661C57CFEF00F39B76 /* CJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTabBar.m; sourceTree = "<group>"; };
+		7C6B88671C57CFEF00F39B76 /* CJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTabBarButton.h; sourceTree = "<group>"; };
+		7C6B88681C57CFEF00F39B76 /* CJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTabBarButton.m; sourceTree = "<group>"; };
+		7C6B886D1C57CFEF00F39B76 /* CJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMessageViewController.h; sourceTree = "<group>"; };
+		7C6B886E1C57CFEF00F39B76 /* CJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMessageViewController.m; sourceTree = "<group>"; };
+		7C6B88721C57CFEF00F39B76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7C6B88731C57CFEF00F39B76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7C6B88751C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CJBarButtonItem.h"; sourceTree = "<group>"; };
+		7C6B88761C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CJBarButtonItem.m"; sourceTree = "<group>"; };
+		7C6B88771C57CFEF00F39B76 /* UIImage+CZRenderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CZRenderImage.h"; sourceTree = "<group>"; };
+		7C6B88781C57CFEF00F39B76 /* UIImage+CZRenderImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CZRenderImage.m"; sourceTree = "<group>"; };
+		7C6B88791C57CFEF00F39B76 /* UIView+view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+view.h"; sourceTree = "<group>"; };
+		7C6B887A1C57CFEF00F39B76 /* UIView+view.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+view.m"; sourceTree = "<group>"; };
+		7C6B887B1C57CFEF00F39B76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C6B887D1C57CFEF00F39B76 /* CJProFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJProFileViewController.h; sourceTree = "<group>"; };
+		7C6B887E1C57CFEF00F39B76 /* CJProFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJProFileViewController.m; sourceTree = "<group>"; };
+		7C6B88931C57DB3900F39B76 /* CJPopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPopController.h; sourceTree = "<group>"; };
+		7C6B88941C57DB3900F39B76 /* CJPopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPopController.m; sourceTree = "<group>"; };
 		7CD610F71C578A8000F737E8 /* sina.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sina.pch; sourceTree = "<group>"; };
-		7CD673D71C4E968B00F9F1C1 /* CJDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDiscoverViewController.h; sourceTree = "<group>"; };
-		7CD673D81C4E968B00F9F1C1 /* CJDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDiscoverViewController.m; sourceTree = "<group>"; };
-		7CD673DA1C4E968B00F9F1C1 /* CZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMainViewController.h; sourceTree = "<group>"; };
-		7CD673DB1C4E968B00F9F1C1 /* CZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMainViewController.m; sourceTree = "<group>"; };
-		7CD673DD1C4E968B00F9F1C1 /* CZTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabbar.h; sourceTree = "<group>"; };
-		7CD673DE1C4E968B00F9F1C1 /* CZTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabbar.m; sourceTree = "<group>"; };
-		7CD673DF1C4E968B00F9F1C1 /* CZTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabbarViewController.h; sourceTree = "<group>"; };
-		7CD673E01C4E968B00F9F1C1 /* CZTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabbarViewController.m; sourceTree = "<group>"; };
-		7CD673E21C4E968B00F9F1C1 /* CJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMessageViewController.h; sourceTree = "<group>"; };
-		7CD673E31C4E968B00F9F1C1 /* CJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMessageViewController.m; sourceTree = "<group>"; };
-		7CD673E51C4E968B00F9F1C1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7CD673E61C4E968B00F9F1C1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7CD673E81C4E968B00F9F1C1 /* UIImage+CZRenderImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CZRenderImage.h"; sourceTree = "<group>"; };
-		7CD673E91C4E968B00F9F1C1 /* UIImage+CZRenderImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CZRenderImage.m"; sourceTree = "<group>"; };
-		7CD673EA1C4E968B00F9F1C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7CD673EC1C4E968B00F9F1C1 /* CJProFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJProFileViewController.h; sourceTree = "<group>"; };
-		7CD673ED1C4E968B00F9F1C1 /* CJProFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJProFileViewController.m; sourceTree = "<group>"; };
-		7CD673F71C4EA9D500F9F1C1 /* CJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTabBar.h; sourceTree = "<group>"; };
-		7CD673F81C4EA9D500F9F1C1 /* CJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTabBar.m; sourceTree = "<group>"; };
-		7CD673FA1C4EB2CD00F9F1C1 /* CJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTabBarButton.h; sourceTree = "<group>"; };
-		7CD673FB1C4EB2CD00F9F1C1 /* CJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTabBarButton.m; sourceTree = "<group>"; };
 		7CE8FF7C1C4C2FF6005F0EEE /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE8FF8B1C4C2FF6005F0EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CE8FF8E1C4C2FF6005F0EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,100 +83,220 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7CD673D51C4E968B00F9F1C1 /* class */ = {
+		7C6B884A1C57CFEF00F39B76 /* class */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673E41C4E968B00F9F1C1 /* others */,
-				7CD673DC1C4E968B00F9F1C1 /* main */,
-				7CD673D91C4E968B00F9F1C1 /* home（首页） */,
-				7CD673E11C4E968B00F9F1C1 /* message（消息） */,
-				7CD673D61C4E968B00F9F1C1 /* discover（发现） */,
-				7CD673EB1C4E968B00F9F1C1 /* profile（我） */,
+				7C6B884B1C57CFEF00F39B76 /* discover（发现） */,
+				7C6B88511C57CFEF00F39B76 /* home（首页） */,
+				7C6B885D1C57CFEF00F39B76 /* main */,
+				7C6B886B1C57CFEF00F39B76 /* message（消息） */,
+				7C6B88711C57CFEF00F39B76 /* others */,
+				7C6B887C1C57CFEF00F39B76 /* profile（我） */,
 			);
 			path = class;
 			sourceTree = "<group>";
 		};
-		7CD673D61C4E968B00F9F1C1 /* discover（发现） */ = {
+		7C6B884B1C57CFEF00F39B76 /* discover（发现） */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673D71C4E968B00F9F1C1 /* CJDiscoverViewController.h */,
-				7CD673D81C4E968B00F9F1C1 /* CJDiscoverViewController.m */,
+				7C6B884C1C57CFEF00F39B76 /* controller */,
+				7C6B884F1C57CFEF00F39B76 /* model */,
+				7C6B88501C57CFEF00F39B76 /* view */,
 			);
 			path = "discover（发现）";
 			sourceTree = "<group>";
 		};
-		7CD673D91C4E968B00F9F1C1 /* home（首页） */ = {
+		7C6B884C1C57CFEF00F39B76 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673DA1C4E968B00F9F1C1 /* CZMainViewController.h */,
-				7CD673DB1C4E968B00F9F1C1 /* CZMainViewController.m */,
-				7C49C0191C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.h */,
-				7C49C01A1C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.m */,
-				7C49C01C1C524F9A00E9C338 /* CJTitleButton.h */,
-				7C49C01D1C524F9A00E9C338 /* CJTitleButton.m */,
-				7C43BD7A1C529DDC00B178DB /* CJCover.h */,
-				7C43BD7B1C529DDC00B178DB /* CJCover.m */,
-				7CB2F0CE1C56763B000F3C12 /* CJPopMenu.h */,
-				7CB2F0CF1C56763B000F3C12 /* CJPopMenu.m */,
+				7C6B884D1C57CFEF00F39B76 /* CJDiscoverViewController.h */,
+				7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7C6B884F1C57CFEF00F39B76 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C6B88501C57CFEF00F39B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7C6B88511C57CFEF00F39B76 /* home（首页） */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B88521C57CFEF00F39B76 /* controller */,
+				7C6B88551C57CFEF00F39B76 /* model */,
+				7C6B88561C57CFEF00F39B76 /* view */,
 			);
 			path = "home（首页）";
 			sourceTree = "<group>";
 		};
-		7CD673DC1C4E968B00F9F1C1 /* main */ = {
+		7C6B88521C57CFEF00F39B76 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673DD1C4E968B00F9F1C1 /* CZTabbar.h */,
-				7CD673DE1C4E968B00F9F1C1 /* CZTabbar.m */,
-				7CD673F71C4EA9D500F9F1C1 /* CJTabBar.h */,
-				7CD673F81C4EA9D500F9F1C1 /* CJTabBar.m */,
-				7CD673FA1C4EB2CD00F9F1C1 /* CJTabBarButton.h */,
-				7CD673FB1C4EB2CD00F9F1C1 /* CJTabBarButton.m */,
-				7CD673DF1C4E968B00F9F1C1 /* CZTabbarViewController.h */,
-				7CD673E01C4E968B00F9F1C1 /* CZTabbarViewController.m */,
-				7C7851E81C4FA77300A20AF8 /* CJNavigationController.h */,
-				7C7851E91C4FA77300A20AF8 /* CJNavigationController.m */,
+				7C6B88531C57CFEF00F39B76 /* CJMainViewController.h */,
+				7C6B88541C57CFEF00F39B76 /* CJMainViewController.m */,
+				7C6B88931C57DB3900F39B76 /* CJPopController.h */,
+				7C6B88941C57DB3900F39B76 /* CJPopController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7C6B88551C57CFEF00F39B76 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C6B88561C57CFEF00F39B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B88571C57CFEF00F39B76 /* CJCover.h */,
+				7C6B88581C57CFEF00F39B76 /* CJCover.m */,
+				7C6B88591C57CFEF00F39B76 /* CJPopMenu.h */,
+				7C6B885A1C57CFEF00F39B76 /* CJPopMenu.m */,
+				7C6B885B1C57CFEF00F39B76 /* CJTitleButton.h */,
+				7C6B885C1C57CFEF00F39B76 /* CJTitleButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7C6B885D1C57CFEF00F39B76 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B885E1C57CFEF00F39B76 /* controller */,
+				7C6B88631C57CFEF00F39B76 /* model */,
+				7C6B88641C57CFEF00F39B76 /* view */,
 			);
 			path = main;
 			sourceTree = "<group>";
 		};
-		7CD673E11C4E968B00F9F1C1 /* message（消息） */ = {
+		7C6B885E1C57CFEF00F39B76 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673E21C4E968B00F9F1C1 /* CJMessageViewController.h */,
-				7CD673E31C4E968B00F9F1C1 /* CJMessageViewController.m */,
+				7C6B885F1C57CFEF00F39B76 /* CJNavigationController.h */,
+				7C6B88601C57CFEF00F39B76 /* CJNavigationController.m */,
+				7C6B88611C57CFEF00F39B76 /* CJTabbarViewController.h */,
+				7C6B88621C57CFEF00F39B76 /* CJTabbarViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7C6B88631C57CFEF00F39B76 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C6B88641C57CFEF00F39B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B88651C57CFEF00F39B76 /* CJTabBar.h */,
+				7C6B88661C57CFEF00F39B76 /* CJTabBar.m */,
+				7C6B88671C57CFEF00F39B76 /* CJTabBarButton.h */,
+				7C6B88681C57CFEF00F39B76 /* CJTabBarButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7C6B886B1C57CFEF00F39B76 /* message（消息） */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B886C1C57CFEF00F39B76 /* controller */,
+				7C6B886F1C57CFEF00F39B76 /* model */,
+				7C6B88701C57CFEF00F39B76 /* view */,
 			);
 			path = "message（消息）";
 			sourceTree = "<group>";
 		};
-		7CD673E41C4E968B00F9F1C1 /* others */ = {
+		7C6B886C1C57CFEF00F39B76 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673E51C4E968B00F9F1C1 /* AppDelegate.h */,
-				7CD673E61C4E968B00F9F1C1 /* AppDelegate.m */,
-				7CD673E71C4E968B00F9F1C1 /* category */,
-				7CD673EA1C4E968B00F9F1C1 /* main.m */,
+				7C6B886D1C57CFEF00F39B76 /* CJMessageViewController.h */,
+				7C6B886E1C57CFEF00F39B76 /* CJMessageViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7C6B886F1C57CFEF00F39B76 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C6B88701C57CFEF00F39B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7C6B88711C57CFEF00F39B76 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B88721C57CFEF00F39B76 /* AppDelegate.h */,
+				7C6B88731C57CFEF00F39B76 /* AppDelegate.m */,
+				7C6B88741C57CFEF00F39B76 /* category */,
+				7C6B887B1C57CFEF00F39B76 /* main.m */,
 			);
 			path = others;
 			sourceTree = "<group>";
 		};
-		7CD673E71C4E968B00F9F1C1 /* category */ = {
+		7C6B88741C57CFEF00F39B76 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				7C53A04F1C5269520062CCD5 /* UIView+view.h */,
-				7C53A0501C5269520062CCD5 /* UIView+view.m */,
-				7CD673E81C4E968B00F9F1C1 /* UIImage+CZRenderImage.h */,
-				7CD673E91C4E968B00F9F1C1 /* UIImage+CZRenderImage.m */,
+				7C6B88751C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.h */,
+				7C6B88761C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m */,
+				7C6B88771C57CFEF00F39B76 /* UIImage+CZRenderImage.h */,
+				7C6B88781C57CFEF00F39B76 /* UIImage+CZRenderImage.m */,
+				7C6B88791C57CFEF00F39B76 /* UIView+view.h */,
+				7C6B887A1C57CFEF00F39B76 /* UIView+view.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
 		};
-		7CD673EB1C4E968B00F9F1C1 /* profile（我） */ = {
+		7C6B887C1C57CFEF00F39B76 /* profile（我） */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673EC1C4E968B00F9F1C1 /* CJProFileViewController.h */,
-				7CD673ED1C4E968B00F9F1C1 /* CJProFileViewController.m */,
+				7C6B887D1C57CFEF00F39B76 /* CJProFileViewController.h */,
+				7C6B887E1C57CFEF00F39B76 /* CJProFileViewController.m */,
+				7C6B887F1C57CFEF00F39B76 /* controller */,
+				7C6B88801C57CFEF00F39B76 /* model */,
+				7C6B88811C57CFEF00F39B76 /* view */,
 			);
 			path = "profile（我）";
+			sourceTree = "<group>";
+		};
+		7C6B887F1C57CFEF00F39B76 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		7C6B88801C57CFEF00F39B76 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C6B88811C57CFEF00F39B76 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		7CE8FF731C4C2FF6005F0EEE = {
@@ -199,7 +319,7 @@
 		7CE8FF7E1C4C2FF6005F0EEE /* sina */ = {
 			isa = PBXGroup;
 			children = (
-				7CD673D51C4E968B00F9F1C1 /* class */,
+				7C6B884A1C57CFEF00F39B76 /* class */,
 				7CE8FF8B1C4C2FF6005F0EEE /* Assets.xcassets */,
 				7CE8FF8D1C4C2FF6005F0EEE /* LaunchScreen.storyboard */,
 				7CE8FF7F1C4C2FF6005F0EEE /* Supporting Files */,
@@ -286,23 +406,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C43BD7C1C529DDC00B178DB /* CJCover.m in Sources */,
-				7CD673F91C4EA9D500F9F1C1 /* CJTabBar.m in Sources */,
-				7C49C01E1C524F9A00E9C338 /* CJTitleButton.m in Sources */,
-				7CD673EF1C4E968B00F9F1C1 /* CZMainViewController.m in Sources */,
-				7C53A0511C5269520062CCD5 /* UIView+view.m in Sources */,
-				7CD673FC1C4EB2CD00F9F1C1 /* CJTabBarButton.m in Sources */,
-				7CD673F11C4E968B00F9F1C1 /* CZTabbarViewController.m in Sources */,
-				7C7851EA1C4FA77300A20AF8 /* CJNavigationController.m in Sources */,
-				7CD673EE1C4E968B00F9F1C1 /* CJDiscoverViewController.m in Sources */,
-				7CD673F01C4E968B00F9F1C1 /* CZTabbar.m in Sources */,
-				7CB2F0D01C56763B000F3C12 /* CJPopMenu.m in Sources */,
-				7CD673F61C4E968B00F9F1C1 /* CJProFileViewController.m in Sources */,
-				7C49C01B1C5242DA00E9C338 /* UIBarButtonItem+CJBarButtonItem.m in Sources */,
-				7CD673F21C4E968B00F9F1C1 /* CJMessageViewController.m in Sources */,
-				7CD673F41C4E968B00F9F1C1 /* UIImage+CZRenderImage.m in Sources */,
-				7CD673F51C4E968B00F9F1C1 /* main.m in Sources */,
-				7CD673F31C4E968B00F9F1C1 /* AppDelegate.m in Sources */,
+				7C6B88951C57DB3900F39B76 /* CJPopController.m in Sources */,
+				7C6B888F1C57CFEF00F39B76 /* UIImage+CZRenderImage.m in Sources */,
+				7C6B88831C57CFEF00F39B76 /* CJMainViewController.m in Sources */,
+				7C6B88881C57CFEF00F39B76 /* CJTabbarViewController.m in Sources */,
+				7C6B88901C57CFEF00F39B76 /* UIView+view.m in Sources */,
+				7C6B888C1C57CFEF00F39B76 /* CJMessageViewController.m in Sources */,
+				7C6B88821C57CFEF00F39B76 /* CJDiscoverViewController.m in Sources */,
+				7C6B88911C57CFEF00F39B76 /* main.m in Sources */,
+				7C6B88841C57CFEF00F39B76 /* CJCover.m in Sources */,
+				7C6B88861C57CFEF00F39B76 /* CJTitleButton.m in Sources */,
+				7C6B88871C57CFEF00F39B76 /* CJNavigationController.m in Sources */,
+				7C6B88891C57CFEF00F39B76 /* CJTabBar.m in Sources */,
+				7C6B888E1C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m in Sources */,
+				7C6B88921C57CFEF00F39B76 /* CJProFileViewController.m in Sources */,
+				7C6B888D1C57CFEF00F39B76 /* AppDelegate.m in Sources */,
+				7C6B88851C57CFEF00F39B76 /* CJPopMenu.m in Sources */,
+				7C6B888A1C57CFEF00F39B76 /* CJTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
