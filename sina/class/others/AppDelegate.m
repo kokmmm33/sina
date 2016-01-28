@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CJTabbarViewController.h"
+#import "CJNewFutureController.h"
 
 
 @interface AppDelegate ()
@@ -20,8 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    CJTabbarViewController *tabbarVC = [[CJTabbarViewController alloc]init];
-    self.window.rootViewController = tabbarVC;
+    CJNewFutureController *newFuture = [[CJNewFutureController alloc]init];
+    self.window.rootViewController = newFuture;
     
     [self.window makeKeyAndVisible];
     
