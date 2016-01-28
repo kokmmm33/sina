@@ -21,8 +21,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    CJNewFutureController *newFuture = [[CJNewFutureController alloc]init];
-    self.window.rootViewController = newFuture;
+    
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"]) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirst"];
+        
+        CJNewFutureController *newFuture = [[CJNewFutureController alloc]init];
+        self.window.rootViewController = newFuture;
+        
+        NSLog(@"第一次启动程序");
+        
+    }else
+    {
+        CJTabbarViewController *tabBarController = [[CJTabbarViewController alloc]init];
+        
+        self.window.rootViewController = tabBarController;
+    
+        NSLog(@"不是第一次启动程序");
+    
+    }
+
     
     [self.window makeKeyAndVisible];
     
