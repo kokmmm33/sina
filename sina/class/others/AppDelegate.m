@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CJTabbarViewController.h"
 #import "CJNewFutureController.h"
+#import "CJOAuthController.h"
 
 
 @interface AppDelegate ()
@@ -22,25 +23,28 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"]) {
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirst"];
-        
-        CJNewFutureController *newFuture = [[CJNewFutureController alloc]init];
-        self.window.rootViewController = newFuture;
-        
-        NSLog(@"第一次启动程序");
-        
-    }else
-    {
-        CJTabbarViewController *tabBarController = [[CJTabbarViewController alloc]init];
-        
-        self.window.rootViewController = tabBarController;
+//    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"]) {
+//        
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirst"];
+//        
+//        CJNewFutureController *newFuture = [[CJNewFutureController alloc]init];
+//        self.window.rootViewController = newFuture;
+//        
+//        NSLog(@"第一次启动程序");
+//        
+//    }else
+//    {
+//        CJTabbarViewController *tabBarController = [[CJTabbarViewController alloc]init];
+//        
+//        self.window.rootViewController = tabBarController;
+//    
+//        NSLog(@"不是第一次启动程序");
+//    
+//    }
     
-        NSLog(@"不是第一次启动程序");
+    CJOAuthController *vc = [[CJOAuthController alloc]init];
     
-    }
-
+    self.window.rootViewController = vc;
     
     [self.window makeKeyAndVisible];
     
