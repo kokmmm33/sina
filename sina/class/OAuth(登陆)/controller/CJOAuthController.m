@@ -8,7 +8,12 @@
 
 #import "CJOAuthController.h"
 
+#import "CJAccount.h"
+#import "CJAcountTools.h"
+
 #import "AFNetworking.h"
+
+
 
 @interface CJOAuthController ()<UIWebViewDelegate>
 
@@ -85,6 +90,12 @@
     
     [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"responseObject=%@",responseObject);
+        
+        CJAccount *account = [CJAccount accountWithDic:responseObject];
+        
+        [CJAcountTools saveAcount:account];
+        
+              
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
     }];

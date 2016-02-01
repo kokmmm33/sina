@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C47FCB11C5E65B1000BA1C1 /* CJAcountTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */; settings = {ASSET_TAGS = (); }; };
 		7C6A3F281C4CCD190053B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6A3F271C4CCD190053B058 /* UIKit.framework */; };
 		7C6B88821C57CFEF00F39B76 /* CJDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7C6B88831C57CFEF00F39B76 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88541C57CFEF00F39B76 /* CJMainViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -70,12 +71,15 @@
 		7C85FF591C5E495300741185 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF2C1C5E495300741185 /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
 		7C85FF5A1C5E495300741185 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF2E1C5E495300741185 /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		7C85FF5B1C5E495300741185 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF301C5E495300741185 /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
-		7CA9C4771C5D37D100A4B703 /* CJOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9C4761C5D37D100A4B703 /* CJOAuthController.m */; settings = {ASSET_TAGS = (); }; };
+		7C85FF621C5E54AD00741185 /* CJOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF5F1C5E54AD00741185 /* CJOAuthController.m */; settings = {ASSET_TAGS = (); }; };
+		7C85FF651C5E54ED00741185 /* CJAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF641C5E54ED00741185 /* CJAccount.m */; settings = {ASSET_TAGS = (); }; };
 		7CE8FF8C1C4C2FF6005F0EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8FF8B1C4C2FF6005F0EEE /* Assets.xcassets */; };
 		7CE8FF8F1C4C2FF6005F0EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8FF8D1C4C2FF6005F0EEE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C47FCAF1C5E65B1000BA1C1 /* CJAcountTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAcountTools.h; sourceTree = "<group>"; };
+		7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAcountTools.m; sourceTree = "<group>"; };
 		7C6A3F271C4CCD190053B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C6B884D1C57CFEF00F39B76 /* CJDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDiscoverViewController.h; sourceTree = "<group>"; };
 		7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDiscoverViewController.m; sourceTree = "<group>"; };
@@ -202,8 +206,10 @@
 		7C85FF2E1C5E495300741185 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		7C85FF2F1C5E495300741185 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		7C85FF301C5E495300741185 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		7CA9C4751C5D37D100A4B703 /* CJOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJOAuthController.h; sourceTree = "<group>"; };
-		7CA9C4761C5D37D100A4B703 /* CJOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJOAuthController.m; sourceTree = "<group>"; };
+		7C85FF5E1C5E54AD00741185 /* CJOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJOAuthController.h; sourceTree = "<group>"; };
+		7C85FF5F1C5E54AD00741185 /* CJOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJOAuthController.m; sourceTree = "<group>"; };
+		7C85FF631C5E54ED00741185 /* CJAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAccount.h; sourceTree = "<group>"; };
+		7C85FF641C5E54ED00741185 /* CJAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAccount.m; sourceTree = "<group>"; };
 		7CD610F71C578A8000F737E8 /* sina.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sina.pch; sourceTree = "<group>"; };
 		7CE8FF7C1C4C2FF6005F0EEE /* sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE8FF8B1C4C2FF6005F0EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,10 +229,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C47FCAD1C5E65B1000BA1C1 /* tools（业务类） */ = {
+			isa = PBXGroup;
+			children = (
+				7C47FCAE1C5E65B1000BA1C1 /* acountTools */,
+			);
+			path = "tools（业务类）";
+			sourceTree = "<group>";
+		};
+		7C47FCAE1C5E65B1000BA1C1 /* acountTools */ = {
+			isa = PBXGroup;
+			children = (
+				7C47FCAF1C5E65B1000BA1C1 /* CJAcountTools.h */,
+				7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */,
+			);
+			path = acountTools;
+			sourceTree = "<group>";
+		};
 		7C6B884A1C57CFEF00F39B76 /* class */ = {
 			isa = PBXGroup;
 			children = (
-				7CA9C4711C5D37AF00A4B703 /* loading(登陆) */,
+				7C47FCAD1C5E65B1000BA1C1 /* tools（业务类） */,
+				7C85FF5C1C5E54AD00741185 /* OAuth(登陆) */,
 				7C7526271C5A5518002ACBF0 /* newFuture(新特性) */,
 				7C6B884B1C57CFEF00F39B76 /* discover（发现） */,
 				7C6B88511C57CFEF00F39B76 /* home（首页） */,
@@ -612,33 +636,35 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		7CA9C4711C5D37AF00A4B703 /* loading(登陆) */ = {
+		7C85FF5C1C5E54AD00741185 /* OAuth(登陆) */ = {
 			isa = PBXGroup;
 			children = (
-				7CA9C4721C5D37AF00A4B703 /* controller */,
-				7CA9C4731C5D37AF00A4B703 /* model */,
-				7CA9C4741C5D37AF00A4B703 /* view */,
+				7C85FF5D1C5E54AD00741185 /* controller */,
+				7C85FF601C5E54AD00741185 /* model */,
+				7C85FF611C5E54AD00741185 /* view */,
 			);
-			path = "loading(登陆)";
+			path = "OAuth(登陆)";
 			sourceTree = "<group>";
 		};
-		7CA9C4721C5D37AF00A4B703 /* controller */ = {
+		7C85FF5D1C5E54AD00741185 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CA9C4751C5D37D100A4B703 /* CJOAuthController.h */,
-				7CA9C4761C5D37D100A4B703 /* CJOAuthController.m */,
+				7C85FF5E1C5E54AD00741185 /* CJOAuthController.h */,
+				7C85FF5F1C5E54AD00741185 /* CJOAuthController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		7CA9C4731C5D37AF00A4B703 /* model */ = {
+		7C85FF601C5E54AD00741185 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7C85FF631C5E54ED00741185 /* CJAccount.h */,
+				7C85FF641C5E54ED00741185 /* CJAccount.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		7CA9C4741C5D37AF00A4B703 /* view */ = {
+		7C85FF611C5E54AD00741185 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -771,7 +797,6 @@
 				7C85FF3A1C5E495300741185 /* MBProgressHUD+MJ.m in Sources */,
 				7C6B88881C57CFEF00F39B76 /* CJTabbarViewController.m in Sources */,
 				7C85FF501C5E495300741185 /* SDWebImageDecoder.m in Sources */,
-				7CA9C4771C5D37D100A4B703 /* CJOAuthController.m in Sources */,
 				7C85FF591C5E495300741185 /* UIImageView+HighlightedWebCache.m in Sources */,
 				7C85FF3F1C5E495300741185 /* MJIvar.m in Sources */,
 				7C85FF4A1C5E495300741185 /* UIScrollView+MJRefresh.m in Sources */,
@@ -779,6 +804,7 @@
 				7C85FF401C5E495300741185 /* MJType.m in Sources */,
 				7C6B88901C57CFEF00F39B76 /* UIView+view.m in Sources */,
 				7C85FF351C5E495300741185 /* AFSecurityPolicy.m in Sources */,
+				7C85FF651C5E54ED00741185 /* CJAccount.m in Sources */,
 				7C85FF571C5E495300741185 /* UIImage+MultiFormat.m in Sources */,
 				7C85FF4C1C5E495300741185 /* MKAnnotationView+WebCache.m in Sources */,
 				7C85FF3E1C5E495300741185 /* MJFoundation.m in Sources */,
@@ -809,11 +835,13 @@
 				7C85FF471C5E495300741185 /* MJRefreshFooterView.m in Sources */,
 				7C85FF551C5E495300741185 /* UIButton+WebCache.m in Sources */,
 				7C6B888D1C57CFEF00F39B76 /* AppDelegate.m in Sources */,
+				7C85FF621C5E54AD00741185 /* CJOAuthController.m in Sources */,
 				7C6B88851C57CFEF00F39B76 /* CJPopMenu.m in Sources */,
 				7C85FF511C5E495300741185 /* SDWebImageDownloader.m in Sources */,
 				7C85FF411C5E495300741185 /* NSObject+MJCoding.m in Sources */,
 				7C85FF341C5E495300741185 /* AFNetworkReachabilityManager.m in Sources */,
 				7C85FF381C5E495300741185 /* AFURLResponseSerialization.m in Sources */,
+				7C47FCB11C5E65B1000BA1C1 /* CJAcountTools.m in Sources */,
 				7C6B888A1C57CFEF00F39B76 /* CJTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
