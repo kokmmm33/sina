@@ -56,13 +56,6 @@
     [self setImage:_item.image forState:UIControlStateNormal];
     
     [self setImage:_item.selectedImage forState:UIControlStateSelected];
-    
-    NSLog(@"%@-=-=-=-%@-=-=-=-=",_item.image,_item.selectedImage);
-    
-    NSLog(@"%@=====",_item);
-    
-
-
 }
 
 -(void)layoutSubviews

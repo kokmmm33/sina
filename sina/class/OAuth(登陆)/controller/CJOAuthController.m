@@ -10,6 +10,7 @@
 
 #import "CJAccount.h"
 #import "CJAcountTools.h"
+#import "CJRootController.h"
 
 #import "AFNetworking.h"
 
@@ -94,6 +95,8 @@
         CJAccount *account = [CJAccount accountWithDic:responseObject];
         
         [CJAcountTools saveAcount:account];
+        
+        [CJRootController chooseRootController];
         
               
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

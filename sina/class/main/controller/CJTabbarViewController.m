@@ -53,7 +53,7 @@
 
     [self setAllChildViewController];
     
-    NSLog(@"self.childViewControllers.count=%lu",(unsigned long)self.childViewControllers.count);
+//  NSLog(@"self.childViewControllers.count=%lu",(unsigned long)self.childViewControllers.count);
     
     CJTabBar *tabbar = [[CJTabBar alloc]initWithFrame:self.tabBar.bounds];
     
@@ -66,7 +66,7 @@
     //[self setValue:tabbar forKeyPath:@"tabBar"];
     //    objc_msgSend(self, @selector(setTabBar:),tabbar);
     [self.tabBar addSubview:tabbar];
-    NSLog(@"self.tabBar.subviews=%@",NSStringFromCGRect(self.tabBar.frame));
+ //   NSLog(@"self.tabBar.subviews=%@",NSStringFromCGRect(self.tabBar.frame));
 
 }
 
@@ -114,7 +114,7 @@
 
 -(void)tabBar:(CJTabBar *)tabBar didClickBarButton:(NSInteger)index
 {
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     self.selectedIndex = index;
 }
 /*
