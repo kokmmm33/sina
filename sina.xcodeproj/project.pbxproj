@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7C47FCB11C5E65B1000BA1C1 /* CJAcountTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */; settings = {ASSET_TAGS = (); }; };
+		7C5DB6931C6157BF00461945 /* CJHTTPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DB6921C6157BF00461945 /* CJHTTPTools.m */; settings = {ASSET_TAGS = (); }; };
+		7C5DB6971C61678E00461945 /* CJStatusTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DB6961C61678E00461945 /* CJStatusTools.m */; settings = {ASSET_TAGS = (); }; };
 		7C6A3F281C4CCD190053B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6A3F271C4CCD190053B058 /* UIKit.framework */; };
 		7C6B88821C57CFEF00F39B76 /* CJDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7C6B88841C57CFEF00F39B76 /* CJCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B88581C57CFEF00F39B76 /* CJCover.m */; settings = {ASSET_TAGS = (); }; };
@@ -84,6 +86,10 @@
 /* Begin PBXFileReference section */
 		7C47FCAF1C5E65B1000BA1C1 /* CJAcountTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAcountTools.h; sourceTree = "<group>"; };
 		7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAcountTools.m; sourceTree = "<group>"; };
+		7C5DB6911C6157BF00461945 /* CJHTTPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHTTPTools.h; sourceTree = "<group>"; };
+		7C5DB6921C6157BF00461945 /* CJHTTPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHTTPTools.m; sourceTree = "<group>"; };
+		7C5DB6951C61678E00461945 /* CJStatusTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJStatusTools.h; sourceTree = "<group>"; };
+		7C5DB6961C61678E00461945 /* CJStatusTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJStatusTools.m; sourceTree = "<group>"; };
 		7C6A3F271C4CCD190053B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C6B884D1C57CFEF00F39B76 /* CJDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDiscoverViewController.h; sourceTree = "<group>"; };
 		7C6B884E1C57CFEF00F39B76 /* CJDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDiscoverViewController.m; sourceTree = "<group>"; };
@@ -244,6 +250,8 @@
 		7C3D79361C60E858009C08FC /* HTTPRquestTools */ = {
 			isa = PBXGroup;
 			children = (
+				7C5DB6911C6157BF00461945 /* CJHTTPTools.h */,
+				7C5DB6921C6157BF00461945 /* CJHTTPTools.m */,
 			);
 			path = HTTPRquestTools;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 		7C47FCAD1C5E65B1000BA1C1 /* tools（业务类） */ = {
 			isa = PBXGroup;
 			children = (
+				7C5DB6941C61677400461945 /* statusTools */,
 				7C3D79361C60E858009C08FC /* HTTPRquestTools */,
 				7CE3CBBE1C5F9ADD0003BDAD /* rootController */,
 				7C47FCAE1C5E65B1000BA1C1 /* acountTools */,
@@ -265,6 +274,15 @@
 				7C47FCB01C5E65B1000BA1C1 /* CJAcountTools.m */,
 			);
 			path = acountTools;
+			sourceTree = "<group>";
+		};
+		7C5DB6941C61677400461945 /* statusTools */ = {
+			isa = PBXGroup;
+			children = (
+				7C5DB6951C61678E00461945 /* CJStatusTools.h */,
+				7C5DB6961C61678E00461945 /* CJStatusTools.m */,
+			);
+			path = statusTools;
 			sourceTree = "<group>";
 		};
 		7C6B884A1C57CFEF00F39B76 /* class */ = {
@@ -850,6 +868,7 @@
 				7C85FF561C5E495300741185 /* UIImage+GIF.m in Sources */,
 				7C85FF421C5E495300741185 /* NSObject+MJIvar.m in Sources */,
 				7C6B88821C57CFEF00F39B76 /* CJDiscoverViewController.m in Sources */,
+				7C5DB6931C6157BF00461945 /* CJHTTPTools.m in Sources */,
 				7C85FF5B1C5E495300741185 /* UIView+WebCacheOperation.m in Sources */,
 				7C7526301C5A5E2F002ACBF0 /* CJNewFutureCell.m in Sources */,
 				7C85FF531C5E495300741185 /* SDWebImageManager.m in Sources */,
@@ -869,6 +888,7 @@
 				7C85FF321C5E495300741185 /* AFHTTPRequestOperationManager.m in Sources */,
 				7C6B888E1C57CFEF00F39B76 /* UIBarButtonItem+CJBarButtonItem.m in Sources */,
 				7C85FF4D1C5E495300741185 /* NSData+ImageContentType.m in Sources */,
+				7C5DB6971C61678E00461945 /* CJStatusTools.m in Sources */,
 				7C85FF471C5E495300741185 /* MJRefreshFooterView.m in Sources */,
 				7C85FF551C5E495300741185 /* UIButton+WebCache.m in Sources */,
 				7C6B888D1C57CFEF00F39B76 /* AppDelegate.m in Sources */,

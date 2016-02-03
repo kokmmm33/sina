@@ -21,9 +21,10 @@
 
 #import "UIBarButtonItem+CJBarButtonItem.h"
 #import "UIView+view.h"
-#import "AFNetworking.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "CJHTTPTools.h"
+#import "CJStatusTools.h"
 
 
 
@@ -51,8 +52,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
     // Do any additional setup after loading the view.
-    [self loadData];
-    
+
     [self setNavigationBar];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ID"];
@@ -72,73 +72,54 @@
 }
 -(void)loadMoreData
 {
-    [self.tableView footerEndRefreshing];
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    
-    CJAccount *account = [CJAcountTools acount];
+    NSString *maxid = nil;
     
     if (self.statuses.count) {
         CJStatus *firstStatus = [self.statuses lastObject];
         
         long long maxID = [firstStatus.idstr longLongValue] - 1;
         
-        parameters[@"max_id"] = [NSString stringWithFormat:@"%lld",maxID];
+        maxid = [NSString stringWithFormat:@"%lld",maxID];
     }
     
-    parameters[@"access_token"] = account.access_token;
+    NSDictionary *keyValue = @{@"max_id":maxid};
     
-    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"**********%@",responseObject);
-        
-        NSArray *dic = responseObject[@"statuses"];
-        
-        NSArray *arr = (NSMutableArray *)[CJStatus objectArrayWithKeyValuesArray:dic];
-        
-        [self.statuses addObjectsFromArray:arr];
+    [CJStatusTools loadDataWithKeyValue:keyValue successBlock:^(NSArray *statuses) {
+        [self.statuses addObjectsFromArray:statuses];
         
         [self.tableView reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@",error);
+    } failedBlock:^(NSError *error) {
+         NSLog(@"%@",error);
     }];
-
+   
+    [self.tableView footerEndRefreshing];
+    
+    
 }
 
 -(void)loadData
 {
-    [self.tableView headerEndRefreshing];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    
-    CJAccount *account = [CJAcountTools acount];
+    NSString *sinceID = @"0";
     
     if (self.statuses.count) {
         CJStatus *firstStatus = self.statuses[0];
-        
-        parameters[@"since_id"] = firstStatus.idstr;
+        sinceID = firstStatus.idstr;
     }
     
-    parameters[@"access_token"] = account.access_token;
-    
-    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"**********%@",responseObject);
+    NSDictionary *keyValue = @{@"since_id":sinceID};
+
+    [CJStatusTools loadDataWithKeyValue:keyValue successBlock:^(NSArray *statuses) {
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
         
-        NSArray *dic = responseObject[@"statuses"];
+        [self.statuses insertObjects:statuses atIndexes:indexSet];
         
-        NSArray *arr = (NSMutableArray *)[CJStatus objectArrayWithKeyValuesArray:dic];
-        
-        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, arr.count)];
-        
-        [self.statuses insertObjects:arr atIndexes:indexSet];
         [self.tableView reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failedBlock:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+    
+   [self.tableView headerEndRefreshing];
 }
 
 
