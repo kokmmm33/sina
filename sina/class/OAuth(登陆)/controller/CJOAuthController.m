@@ -13,6 +13,7 @@
 #import "CJRootController.h"
 
 #import "AFNetworking.h"
+#import "CJAcountTools.h"
 
 
 
@@ -56,54 +57,11 @@
         
         NSLog(@"code=%@",code);
         
-        [self getAccess_tokenWithCode:code];
+        [CJAcountTools loadAcountWithCode:code];
         
         return NO;
     }
     return YES;
-
-}
-
--(void)getAccess_tokenWithCode:(NSString *)code
-{
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-
-    /**
-     必选	类型及范围	说明
-     client_id	true	string	申请应用时分配的AppKey。
-     client_secret	true	string	申请应用时分配的AppSecret。
-     grant_type	true	string	请求的类型，填写authorization_code
-     
-     grant_type为authorization_code时
-     必选	类型及范围	说明
-     code	true	string	调用authorize获得的code值。
-     redirect_uri	true	string	回调地址，需需与注册应用里的回调地址一致。
-    */
-    
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    
-    parameters[@"client_id"] = @"3008994865";
-    parameters[@"client_secret"] = @"679803b998bf148787e7a2ca53cf9b1e";
-    parameters[@"grant_type"] = @"authorization_code";
-    parameters[@"code"] = code;
-    parameters[@"redirect_uri"] = @"https://github.com/";
-
-    
-    [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"responseObject=%@",responseObject);
-        
-        CJAccount *account = [CJAccount accountWithDic:responseObject];
-        
-        [CJAcountTools saveAcount:account];
-        
-        [CJRootController chooseRootController];
-        
-              
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@",error);
-    }];
-
-
 
 }
 

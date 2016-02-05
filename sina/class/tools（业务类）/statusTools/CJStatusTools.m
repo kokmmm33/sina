@@ -10,6 +10,8 @@
 #import "CJHTTPTools.h"
 #import "CJAcountTools.h"
 #import "CJStatus.h"
+#import "CJStatusParameter.h"
+#import "MJExtension.h"
 
 @implementation CJStatusTools
 //
@@ -57,11 +59,9 @@
 //    }];
 //}
 
-+(void)loadDataWithKeyValue:(NSDictionary *)KeyValue successBlock:(void (^)(NSArray *))successBlock failedBlock:(void (^)(NSError *))failedBlock
++(void)loadDataWithParameter:(CJStatusParameter *)parameter successBlock:(void (^)(NSArray *))successBlock failedBlock:(void (^)(NSError *))failedBlock
 {
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:KeyValue];
-    
-    parameters[@"access_token"] = [CJAcountTools acount].access_token;
+    NSDictionary *parameters = parameter.keyValues;
     
     [CJHTTPTools GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters success:^(id responseObject) {
         NSLog(@"**********%@",responseObject);

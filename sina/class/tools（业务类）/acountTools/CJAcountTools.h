@@ -4,7 +4,7 @@
 //
 //  Created by Joseph on 16/1/31.
 //  Copyright © 2016年 运来. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import "CJAccount.h"
@@ -13,4 +13,5 @@
 
 +(void)saveAcount:(CJAccount *)acount;
 +(CJAccount *)acount;
++(void)loadAcountWithCode:(NSString *)code;
 @end

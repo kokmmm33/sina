@@ -12,11 +12,14 @@
 #import "CJTitleButton.h"
 #import "CJCover.h"
 #import "CJPopMenu.h"
+#import "CJStatusCell.h"
 
 #import "CJStatus.h"
 #import "CJUser.h"
 #import "CJAcountTools.h"
 #import "CJAccount.h"
+#import "CJStatusParameter.h"
+#import "CJStatusCellItem.h"
 
 
 #import "UIBarButtonItem+CJBarButtonItem.h"
@@ -25,6 +28,8 @@
 #import "MJRefresh.h"
 #import "CJHTTPTools.h"
 #import "CJStatusTools.h"
+#import "UIImageView+WebCache.h"
+#import "CJUserTools.h"
 
 
 
@@ -32,19 +37,19 @@
 
 @property(nonatomic,weak)UIButton *titleTN;
 
-@property(nonatomic,strong)NSMutableArray *statuses;
+@property(nonatomic,strong)NSMutableArray *statusItems;
 
 @end
 
 @implementation CJMainViewController
 
--(NSMutableArray *)statuses
+-(NSMutableArray *)statusItems
 {
-    if (_statuses == nil) {
-        _statuses = [NSMutableArray array];
+    if (_statusItems == nil) {
+        _statusItems = [NSMutableArray array];
     }
 
-    return _statuses;
+    return _statusItems;
 
 }
 
@@ -54,8 +59,8 @@
     // Do any additional setup after loading the view.
 
     [self setNavigationBar];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ID"];
+//    
+//    [self.tableView registerClass:[CJStatusCell class] forCellReuseIdentifier:@"ID"];
     
     self.tableView.dataSource = self;
     
@@ -75,18 +80,24 @@
     
     NSString *maxid = nil;
     
-    if (self.statuses.count) {
-        CJStatus *firstStatus = [self.statuses lastObject];
+    if (self.statusItems.count) {
+        CJStatusCellItem *item = [self.statusItems lastObject];
         
-        long long maxID = [firstStatus.idstr longLongValue] - 1;
+        long long maxID = [item.status.idstr longLongValue] - 1;
         
         maxid = [NSString stringWithFormat:@"%lld",maxID];
     }
     
-    NSDictionary *keyValue = @{@"max_id":maxid};
+    CJStatusParameter *parameter = [[CJStatusParameter alloc]init];
+    parameter.access_token = [CJAcountTools acount].access_token;
+    parameter.max_id = maxid;
     
-    [CJStatusTools loadDataWithKeyValue:keyValue successBlock:^(NSArray *statuses) {
-        [self.statuses addObjectsFromArray:statuses];
+    [CJStatusTools loadDataWithParameter:parameter successBlock:^(NSArray *statuses) {
+        for (CJStatus *status in statuses) {
+            CJStatusCellItem *item = [[CJStatusCellItem alloc]init];
+            item.status = status;
+            [self.statusItems addObjectsFromArray:statuses];
+        }
         
         [self.tableView reloadData];
     } failedBlock:^(NSError *error) {
@@ -102,19 +113,29 @@
 {
     NSString *sinceID = @"0";
     
-    if (self.statuses.count) {
-        CJStatus *firstStatus = self.statuses[0];
-        sinceID = firstStatus.idstr;
+    if (self.statusItems.count) {
+        CJStatusCellItem *item = self.statusItems[0];
+        sinceID = item.status.idstr;
     }
     
-    NSDictionary *keyValue = @{@"since_id":sinceID};
-
-    [CJStatusTools loadDataWithKeyValue:keyValue successBlock:^(NSArray *statuses) {
-        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+    CJStatusParameter *parameter = [[CJStatusParameter alloc]init];
+    parameter.access_token = [CJAcountTools acount].access_token;
+    parameter.since_id = sinceID;
+    parameter.count = @"101";
+    [CJStatusTools loadDataWithParameter:parameter successBlock:^(NSArray *statuses) {
         
-        [self.statuses insertObjects:statuses atIndexes:indexSet];
-        
+        for (CJStatus *status in statuses) {
+            
+            CJStatusCellItem *item = [[CJStatusCellItem alloc]init];
+            
+            item.status = status;
+            
+            NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+            
+            [self.statusItems insertObjects:statuses atIndexes:indexSet];
+        }
         [self.tableView reloadData];
+        
     } failedBlock:^(NSError *error) {
         NSLog(@"%@",error);
     }];
@@ -138,8 +159,15 @@
 {
     
     CJTitleButton *titleBT = [[CJTitleButton alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+
+    CJAccount *account = [CJAcountTools acount];
     
-    [titleBT setTitle:@"首页" forState:UIControlStateNormal];
+    [CJUserTools getUserInfoWithAccess_token:account.access_token uid:account.uid screenName:nil sucessBlock:^(CJUser *user) {
+        [titleBT setTitle:user.screen_name forState:UIControlStateNormal];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
     
     [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     
@@ -199,6 +227,8 @@
 
 }
 
+#pragma mark - dataSource
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -207,18 +237,23 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.statuses.count;
+    return self.statusItems.count;
 
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID"];
+    CJStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID"];
     
-    CJStatus *status = self.statuses[indexPath.row];
+    if (cell == nil) {
+        cell = [[CJStatusCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ID"];
+    }
 
-    cell.textLabel.text = status.text;
-    
+    CJStatusCellItem *item = self.statusItems[indexPath.row];
+
+    cell.StatusCellItem = item;
+
+
     return cell;
 
 }

@@ -19,44 +19,45 @@
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
         [self setBackgroundImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
-
         
-        self.imageEdgeInsets = UIEdgeInsetsMake(0, 60, 0,0);
-        self.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0,40);
+        [self setBackgroundImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateNormal];
+//        [self setImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
+//        
+//        [self setImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateNormal];
+
         
     }
     return self;
 }
 
-//-(void)layoutSubviews
-//{
-//    [super layoutSubviews];
-//    if (self.currentImage == nil)
-//        
-//        return;
-//    self.titleLabel.x = self.imageView.x;
-//    
-//    self.imageView.x = CGRectGetMaxX(self.titleLabel.frame);
-//
-//
-//    
-//}
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    if (self.currentBackgroundImage == nil)
+    
+    return;
+    
+    self.titleLabel.x = self.imageView.x;
+    
+    self.imageView.x = CGRectGetMaxX(self.titleLabel.frame);
+    
+}
 
 
-//-(void)setTitle:(NSString *)title forState:(UIControlState)state
-//{
-//    [super setTitle:title forState:state];
-//    
-//    [self sizeToFit];
-//
-//}
-//
-//-(void)setImage:(UIImage *)image forState:(UIControlState)state
-//{
-//    [super setImage:image forState:state];
-//    
-//    [self sizeToFit];
-//
-//}
+-(void)setTitle:(NSString *)title forState:(UIControlState)state
+{
+    [super setTitle:title forState:state];
+    
+    [self sizeToFit];
+
+}
+
+-(void)setImage:(UIImage *)image forState:(UIControlState)state
+{
+    [super setImage:image forState:state];
+    
+    [self sizeToFit];
+
+}
 
 @end

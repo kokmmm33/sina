@@ -7,6 +7,10 @@
 //
 
 #import "CJAcountTools.h"
+#import "CJOAuthParameter.h"
+#import "CJHTTPTools.h"
+#import "MJExtension.h"
+#import "CJRootController.h"
 
 #define AccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
 
@@ -36,5 +40,35 @@ static CJAccount *_acount;
     
     return _acount;
 }
+
++(void)loadAcountWithCode:(NSString *)code
+{
+    /**
+     parameters[@"client_id"] = @"3008994865";
+     parameters[@"client_secret"] = @"679803b998bf148787e7a2ca53cf9b1e";
+     parameters[@"grant_type"] = @"authorization_code";
+     parameters[@"code"] = code;
+     parameters[@"redirect_uri"] = @"https://github.com/";
+     */
+    CJOAuthParameter *parameter = [[CJOAuthParameter alloc]init];
+    parameter.client_id = @"3008994865";
+    parameter.client_secret = @"679803b998bf148787e7a2ca53cf9b1e";
+    parameter.grant_type = @"authorization_code";
+    parameter.code = code;
+    parameter.redirect_uri = @"https://github.com/";
+    NSDictionary *dic = parameter.keyValues;
+
+    [CJHTTPTools POST:@"https://api.weibo.com/oauth2/access_token" parameters:dic success:^(id responseObject) {
+        CJAccount *account = [CJAccount accountWithDic:responseObject];
+        
+        [CJAcountTools saveAcount:account];
+
+        [CJRootController chooseRootController];
+
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+}
+
 
 @end

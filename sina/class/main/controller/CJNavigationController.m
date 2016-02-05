@@ -27,8 +27,6 @@
     
     [item setTintColor:[UIColor orangeColor]];
 
-
-
 }
 
 
