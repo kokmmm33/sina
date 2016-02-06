@@ -14,5 +14,10 @@
 
 #define CZKeyWindow [UIApplication sharedApplication].keyWindow
 
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define FONT_12     [UIFont systemFontOfSize:10]
+#define FONT_16     [UIFont systemFontOfSize:16]
+#define FONT_15     [UIFont systemFontOfSize:15]
+
 #import "UIView+view.h"
 #endif /* sina_pch */

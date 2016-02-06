@@ -7,7 +7,6 @@
 //
 
 #import "CJStatusCell.h"
-#import "CJStatusToolsView.h"
 #import "CJOriginalStatusView.h"
 #import "CJretweetedstatusView.h"
 #import "CJStatusCellItem.h"
@@ -31,7 +30,9 @@
 {
     _StatusCellItem = StatusCellItem;
     self.originalView.StatusCellItem = StatusCellItem;
-    self.originalView.frame = StatusCellItem.originalRect;
+    
+    NSLog(@"=====StatusCellItem.originalRect%@",NSStringFromCGRect(StatusCellItem.originalTextFrame));
+    self.originalView.frame = StatusCellItem.originalViewFrame;
     
 
 }
@@ -41,7 +42,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         CJOriginalStatusView *originalView = [[CJOriginalStatusView alloc]init];
-        originalView.frame = self.StatusCellItem.originalRect;
+        originalView.frame = self.StatusCellItem.originalViewFrame;
         _originalView = originalView;
         [self addSubview:originalView];
 //        

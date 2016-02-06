@@ -52,4 +52,6 @@
  */
 @property(nonatomic,copy)NSArray *pic_urls;
 
+
+
 @end

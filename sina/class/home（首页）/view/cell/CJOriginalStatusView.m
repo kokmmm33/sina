@@ -13,10 +13,16 @@
 #import "CJUser.h"
 
 #import "UIImageView+WebCache.h"
-#define status self.StatusCellItem.status
+
 
 @interface CJOriginalStatusView()
 
+@property(nonatomic,weak)UIImageView *iconImageView;
+@property(nonatomic,weak)UILabel *nameLable;
+@property(nonatomic,weak)UIImageView *vipImageView;
+@property(nonatomic,weak)UILabel *timeLable;
+@property(nonatomic,weak)UILabel *sourceLable;
+@property(nonatomic,weak)UILabel *textLable;
 
 
 @end
@@ -27,54 +33,79 @@
     self = [super initWithFrame:frame];
     
     if (self) {
+        
         [self setUpSubView];
         
     }
-    
     return self;
 }
 
 
--(CJStatusCellItem *)StatusCellItem
+-(void)setStatusCellItem:(CJStatusCellItem *)StatusCellItem
 {
-    if (_StatusCellItem == nil) {
-        _StatusCellItem = [[CJStatusCellItem alloc]init];
-    }
-    return _StatusCellItem;
+    _StatusCellItem = StatusCellItem;
+    [self setUpFrame];
+    [self setUpData];
 }
 
+-(void)setUpFrame
+{
+    _iconImageView.frame = _StatusCellItem.originalIconFrame;
+    _nameLable.frame = _StatusCellItem.originalNameFrame;
+    _vipImageView.frame = _StatusCellItem.originalVipFrame;
+    _timeLable.frame = _StatusCellItem.originalTimeFrame;
+    _sourceLable.frame = _StatusCellItem.originalSourceFrame;
+    _textLable.frame = _StatusCellItem.originalTextFrame;
+    
+}
+
+-(void)setUpData
+{
+    [_iconImageView sd_setImageWithURL:_StatusCellItem.status.user.profile_image_url];
+    
+    _nameLable.text = _StatusCellItem.status.user.screen_name;
+    _nameLable.font = FONT_16;
+    
+    _vipImageView.image = [UIImage imageNamed:@"common_icon_membership_expired"];
+    
+    _timeLable.text = _StatusCellItem.status.created_at;
+    _timeLable.font = FONT_12;
+    
+    _sourceLable.text = _StatusCellItem.status.source;
+    _sourceLable.font = FONT_12;
+    
+    _textLable.text = _StatusCellItem.status.text;
+    _textLable.font = FONT_15;
+    _textLable.numberOfLines = 0;
+    _textLable.lineBreakMode = NSLineBreakByCharWrapping;
+
+}
 
 -(void)setUpSubView
 {
     UIImageView *iconImageView = [[UIImageView alloc]init];
-    [iconImageView sd_setImageWithURL:status.user.profile_image_url];
-    iconImageView.frame = self.StatusCellItem.originaIconRect;
     [self addSubview:iconImageView];
+    _iconImageView = iconImageView;
     
     UILabel *nameLable = [[UILabel alloc]init];
-    nameLable.text = status.user.screen_name;
-    nameLable.frame = self.StatusCellItem.originaNameRect;
     [self addSubview:nameLable];
+    _nameLable = nameLable;
     
     UIImageView *vipImageView = [[UIImageView alloc]init];
-    
-    vipImageView.frame = self.StatusCellItem.originalVipRect;
     [self addSubview:vipImageView];
+    _vipImageView = vipImageView;
     
     UILabel *timeLable = [[UILabel alloc]init];
-    timeLable.text = status.created_at;
-    timeLable.frame = self.StatusCellItem.originalTimeRect;
     [self addSubview:timeLable];
+    _timeLable = timeLable;
     
     UILabel *sourceLable = [[UILabel alloc]init];
-    sourceLable.text = status.source;
-    sourceLable.frame = self.StatusCellItem.originalSourceRect;
     [self addSubview:sourceLable];
+    _sourceLable = sourceLable;
     
     UILabel *textLable = [[UILabel alloc]init];
-    textLable.text = status.text;
-    sourceLable.frame = self.StatusCellItem.originalTextRect;
     [self addSubview:textLable];
+    _textLable = textLable;
 
 
 }

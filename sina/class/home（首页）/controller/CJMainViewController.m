@@ -32,7 +32,6 @@
 #import "CJUserTools.h"
 
 
-
 @interface CJMainViewController ()<CJCoverDelegate>
 
 @property(nonatomic,weak)UIButton *titleTN;
@@ -46,7 +45,9 @@
 -(NSMutableArray *)statusItems
 {
     if (_statusItems == nil) {
+        
         _statusItems = [NSMutableArray array];
+        
     }
 
     return _statusItems;
@@ -93,11 +94,14 @@
     parameter.max_id = maxid;
     
     [CJStatusTools loadDataWithParameter:parameter successBlock:^(NSArray *statuses) {
+        NSMutableArray *itemArr = [NSMutableArray array];
         for (CJStatus *status in statuses) {
             CJStatusCellItem *item = [[CJStatusCellItem alloc]init];
             item.status = status;
-            [self.statusItems addObjectsFromArray:statuses];
+            [itemArr addObject:item];
         }
+        
+        [self.statusItems addObjectsFromArray:itemArr];
         
         [self.tableView reloadData];
     } failedBlock:^(NSError *error) {
@@ -121,19 +125,20 @@
     CJStatusParameter *parameter = [[CJStatusParameter alloc]init];
     parameter.access_token = [CJAcountTools acount].access_token;
     parameter.since_id = sinceID;
-    parameter.count = @"101";
+    
     [CJStatusTools loadDataWithParameter:parameter successBlock:^(NSArray *statuses) {
         
+        NSMutableArray *itemArr = [NSMutableArray array];
         for (CJStatus *status in statuses) {
             
             CJStatusCellItem *item = [[CJStatusCellItem alloc]init];
             
             item.status = status;
             
-            NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
-            
-            [self.statusItems insertObjects:statuses atIndexes:indexSet];
+            [itemArr addObject:item];
         }
+         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+        [self.statusItems insertObjects:itemArr atIndexes:indexSet];
         [self.tableView reloadData];
         
     } failedBlock:^(NSError *error) {
@@ -243,10 +248,11 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CJStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID"];
+    static NSString *ID = @"ID";
+    CJStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (cell == nil) {
-        cell = [[CJStatusCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ID"];
+        cell = [[CJStatusCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
 
     CJStatusCellItem *item = self.statusItems[indexPath.row];
@@ -255,6 +261,13 @@
 
 
     return cell;
+
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CJStatusCellItem *item = self.statusItems[indexPath.row];
+    return item.cellHeight;
 
 }
 @end

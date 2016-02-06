@@ -10,32 +10,58 @@
 @class CJStatus;
 
 @interface CJStatusCellItem : NSObject
+/**
+ *  微博数据
+ */
+@property (nonatomic, strong) CJStatus *status;
 
-@property(nonatomic,strong)CJStatus *status;
+// 原创微博frame
+@property (nonatomic, assign) CGRect originalViewFrame;
 
-@property(nonatomic,assign)CGRect originalRect;
+/**   ******原创微博子控件frame**** */
+// 头像Frame
+@property (nonatomic, assign) CGRect originalIconFrame;
 
-@property(nonatomic,assign)CGRect originaIconRect;
+// 昵称Frame
+@property (nonatomic, assign) CGRect originalNameFrame;
 
-@property(nonatomic,assign)CGRect originaNameRect;
+// vipFrame
+@property (nonatomic, assign) CGRect originalVipFrame;
 
-@property(nonatomic,assign)CGRect originalVipRect;
+// 时间Frame
+@property (nonatomic, assign) CGRect originalTimeFrame;
 
-@property(nonatomic,assign)CGRect originalTimeRect;
+// 来源Frame
+@property (nonatomic, assign) CGRect originalSourceFrame;
 
-@property(nonatomic,assign)CGRect originalSourceRect;
+// 正文Frame
+@property (nonatomic, assign) CGRect originalTextFrame;
 
-@property(nonatomic,assign)CGRect originalTextRect;
-
-@property(nonatomic,assign)CGRect retweetedRect;
-
-@property(nonatomic,assign)CGRect retweetedNameRect;
-
-@property(nonatomic,assign)CGRect retweetedTextRect;
-
-@property(nonatomic,assign)CGRect toolsRect;
+// 配图Frame
+@property (nonatomic, assign) CGRect originalPhotosFrame;
 
 
+
+// 转发微博frame
+@property (nonatomic, assign) CGRect retweetViewFrame;
+
+/**   ******转发微博子控件frame**** */
+// 昵称Frame
+@property (nonatomic, assign) CGRect retweetNameFrame;
+
+// 正文Frame
+@property (nonatomic, assign) CGRect retweetTextFrame;
+
+// 配图Frame
+@property (nonatomic, assign) CGRect retweetPhotosFrame;
+
+// 工具条frame
+@property (nonatomic, assign) CGRect toolBarFrame;
+
+
+
+// cell的高度
+@property (nonatomic, assign) CGFloat cellHeight;
 
 
 

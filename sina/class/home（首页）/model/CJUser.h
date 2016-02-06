@@ -21,4 +21,6 @@
  *  用户昵称
  */
 @property(nonatomic,copy)NSString *screen_name;
+
+@property(nonatomic,assign)BOOL vip;
 @end

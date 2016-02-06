@@ -89,7 +89,6 @@
 		7CEA9CFC1C64E46E0007B50F /* CJStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA9CFB1C64E46E0007B50F /* CJStatusCell.m */; settings = {ASSET_TAGS = (); }; };
 		7CEA9CFF1C64E4A30007B50F /* CJOriginalStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA9CFE1C64E4A30007B50F /* CJOriginalStatusView.m */; settings = {ASSET_TAGS = (); }; };
 		7CEA9D021C64E4EC0007B50F /* CJretweetedstatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA9D011C64E4EC0007B50F /* CJretweetedstatusView.m */; settings = {ASSET_TAGS = (); }; };
-		7CEA9D051C64E5160007B50F /* CJStatusToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA9D041C64E5160007B50F /* CJStatusToolsView.m */; settings = {ASSET_TAGS = (); }; };
 		7CEA9D081C64E9260007B50F /* CJStatusCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA9D071C64E9260007B50F /* CJStatusCellItem.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -259,8 +258,6 @@
 		7CEA9CFE1C64E4A30007B50F /* CJOriginalStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJOriginalStatusView.m; sourceTree = "<group>"; };
 		7CEA9D001C64E4EC0007B50F /* CJretweetedstatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJretweetedstatusView.h; sourceTree = "<group>"; };
 		7CEA9D011C64E4EC0007B50F /* CJretweetedstatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJretweetedstatusView.m; sourceTree = "<group>"; };
-		7CEA9D031C64E5160007B50F /* CJStatusToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJStatusToolsView.h; sourceTree = "<group>"; };
-		7CEA9D041C64E5160007B50F /* CJStatusToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJStatusToolsView.m; sourceTree = "<group>"; };
 		7CEA9D061C64E9260007B50F /* CJStatusCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJStatusCellItem.h; sourceTree = "<group>"; };
 		7CEA9D071C64E9260007B50F /* CJStatusCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJStatusCellItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -828,8 +825,6 @@
 				7CEA9CFE1C64E4A30007B50F /* CJOriginalStatusView.m */,
 				7CEA9D001C64E4EC0007B50F /* CJretweetedstatusView.h */,
 				7CEA9D011C64E4EC0007B50F /* CJretweetedstatusView.m */,
-				7CEA9D031C64E5160007B50F /* CJStatusToolsView.h */,
-				7CEA9D041C64E5160007B50F /* CJStatusToolsView.m */,
 				7CEA9D061C64E9260007B50F /* CJStatusCellItem.h */,
 				7CEA9D071C64E9260007B50F /* CJStatusCellItem.m */,
 			);
@@ -986,7 +981,6 @@
 				7C85FF381C5E495300741185 /* AFURLResponseSerialization.m in Sources */,
 				7C47FCB11C5E65B1000BA1C1 /* CJAcountTools.m in Sources */,
 				7C6B888A1C57CFEF00F39B76 /* CJTabBarButton.m in Sources */,
-				7CEA9D051C64E5160007B50F /* CJStatusToolsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
