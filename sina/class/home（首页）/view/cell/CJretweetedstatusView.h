@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CJretweetedstatusView : UIView
+@class CJStatusCellItem;
+@interface CJretweetedstatusView : UIImageView
+@property(nonatomic,strong)CJStatusCellItem *StatusCellItem;
 
 @end

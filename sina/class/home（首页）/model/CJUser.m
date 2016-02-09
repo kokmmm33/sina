@@ -10,4 +10,15 @@
 
 @implementation CJUser
 
+-(void)setMbtype:(int)mbtype
+{
+    _mbrank = mbtype;
+    if (mbtype ) {
+       _vip = mbtype > 2;
+        
+    }
+
+
+}
+
 @end

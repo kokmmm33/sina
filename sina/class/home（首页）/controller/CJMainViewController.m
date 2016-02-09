@@ -29,6 +29,7 @@
 #import "CJHTTPTools.h"
 #import "CJStatusTools.h"
 #import "UIImageView+WebCache.h"
+#import "UIImage+CZRenderImage.h"
 #import "CJUserTools.h"
 
 
@@ -56,7 +57,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor colorWithRed:220 green:220 blue:220 alpha:0.99];
     // Do any additional setup after loading the view.
 
     [self setNavigationBar];
@@ -174,12 +175,12 @@
     }];
     
     
-    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
-    
-    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
-    
     [titleBT addTarget: self action:@selector(titleBTNClick:) forControlEvents:UIControlEventTouchUpInside];
-
+//    [titleBT setBackgroundImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
+//    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+//    
+//    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
+    
     
     return titleBT;
 

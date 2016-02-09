@@ -8,11 +8,14 @@
 
 #import "CJOriginalStatusView.h"
 
+#import "CJImagesView.h"
+
 #import "CJStatusCellItem.h"
 #import "CJStatus.h"
 #import "CJUser.h"
 
 #import "UIImageView+WebCache.h"
+#import "UIImage+CZRenderImage.h"
 
 
 @interface CJOriginalStatusView()
@@ -23,6 +26,7 @@
 @property(nonatomic,weak)UILabel *timeLable;
 @property(nonatomic,weak)UILabel *sourceLable;
 @property(nonatomic,weak)UILabel *textLable;
+@property(nonatomic,weak)CJImagesView *imagesView;
 
 
 @end
@@ -33,7 +37,8 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        
+        self.userInteractionEnabled = YES;
+        self.image = [UIImage imageWithStrectchable:@"timeline_card_top_background"];
         [self setUpSubView];
         
     }
@@ -46,6 +51,8 @@
     _StatusCellItem = StatusCellItem;
     [self setUpFrame];
     [self setUpData];
+    
+    _imagesView.photos = StatusCellItem.status.pic_urls;
 }
 
 -(void)setUpFrame
@@ -56,6 +63,7 @@
     _timeLable.frame = _StatusCellItem.originalTimeFrame;
     _sourceLable.frame = _StatusCellItem.originalSourceFrame;
     _textLable.frame = _StatusCellItem.originalTextFrame;
+    _imagesView.frame = _StatusCellItem.originalPhotosFrame;
     
 }
 
@@ -63,10 +71,19 @@
 {
     [_iconImageView sd_setImageWithURL:_StatusCellItem.status.user.profile_image_url];
     
+    
     _nameLable.text = _StatusCellItem.status.user.screen_name;
     _nameLable.font = FONT_16;
     
-    _vipImageView.image = [UIImage imageNamed:@"common_icon_membership_expired"];
+    if (_StatusCellItem.status.user.vip) {
+        
+        _nameLable.textColor = [UIColor orangeColor];
+        
+        NSString *vipLv = [NSString stringWithFormat:@"common_icon_membership_level%d",_StatusCellItem.status.user.mbrank];
+        
+         _vipImageView.image = [UIImage imageNamed:vipLv];
+    }
+    
     
     _timeLable.text = _StatusCellItem.status.created_at;
     _timeLable.font = FONT_12;
@@ -106,6 +123,10 @@
     UILabel *textLable = [[UILabel alloc]init];
     [self addSubview:textLable];
     _textLable = textLable;
+    
+    CJImagesView *photosView = [[CJImagesView alloc]init];
+    [self addSubview:photosView];
+    _imagesView = photosView;
 
 
 }

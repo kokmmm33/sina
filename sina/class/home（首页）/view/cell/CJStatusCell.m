@@ -9,10 +9,14 @@
 #import "CJStatusCell.h"
 #import "CJOriginalStatusView.h"
 #import "CJretweetedstatusView.h"
+#import "CJStatusToolsView.h"
+
 #import "CJStatusCellItem.h"
 
 @interface CJStatusCell()
 @property(nonatomic,weak)CJOriginalStatusView *originalView;
+@property(nonatomic,weak)CJretweetedstatusView *retweetedView;
+@property(nonatomic,weak)CJStatusToolsView *toolsView;
 @end
 @implementation CJStatusCell
 
@@ -26,34 +30,46 @@
     // Configure the view for the selected state
 }
 
--(void)setStatusCellItem:(CJStatusCellItem *)StatusCellItem
-{
-    _StatusCellItem = StatusCellItem;
-    self.originalView.StatusCellItem = StatusCellItem;
-    
-    NSLog(@"=====StatusCellItem.originalRect%@",NSStringFromCGRect(StatusCellItem.originalTextFrame));
-    self.originalView.frame = StatusCellItem.originalViewFrame;
-    
-
-}
-
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
         CJOriginalStatusView *originalView = [[CJOriginalStatusView alloc]init];
         originalView.frame = self.StatusCellItem.originalViewFrame;
         _originalView = originalView;
         [self addSubview:originalView];
-//        
-//        CJretweetedstatusView *retweetView = [[CJretweetedstatusView alloc]init];
-//        [self addSubview:retweetView];
-//        
-//        CJStatusToolsView *toolsView = [[CJStatusToolsView alloc]init];
-//        [self addSubview:toolsView];
+        
+        CJretweetedstatusView *retweetView = [[CJretweetedstatusView alloc]init];
+        _retweetedView = retweetView;
+        [self addSubview:retweetView];
+        
+        CJStatusToolsView *toolsView = [[CJStatusToolsView alloc]init];
+        _toolsView = toolsView;
+        [self addSubview:toolsView];
     }
     return self;
 }
+
+-(void)setStatusCellItem:(CJStatusCellItem *)StatusCellItem
+{
+    _StatusCellItem = StatusCellItem;
+    
+    _originalView.StatusCellItem = StatusCellItem;
+    _originalView.frame = StatusCellItem.originalViewFrame;
+    
+    
+    _retweetedView.StatusCellItem = StatusCellItem;
+    _retweetedView.frame = StatusCellItem.retweetViewFrame;
+    
+    _toolsView.frame = StatusCellItem.toolBarFrame;
+    _toolsView.statusCellItem = StatusCellItem;
+
+}
+
+
+
+
 
 
 @end

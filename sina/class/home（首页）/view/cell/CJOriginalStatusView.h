@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class CJStatusCellItem;
-@interface CJOriginalStatusView : UIView
+@interface CJOriginalStatusView : UIImageView
 @property(nonatomic,strong)CJStatusCellItem *StatusCellItem;
 @end
