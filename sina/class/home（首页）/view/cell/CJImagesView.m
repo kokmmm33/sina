@@ -9,6 +9,9 @@
 #import "CJImagesView.h"
 #import "CJStatusImage.h"
 
+#import "MJPhotoBrowser.h"
+#import "MJPhoto.h"
+
 #import "UIImageView+WebCache.h"
 @interface CJImagesView()
 
@@ -51,11 +54,53 @@
 {
     for (int i = 0; i < 9; i++) {
         UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.userInteractionEnabled = YES;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
+        imageView.tag = i;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+        
+        [imageView addGestureRecognizer:tap];
+        
         [self addSubview:imageView];
         [self.photosArr addObject:imageView];
     }
+}
+
+//相册点击事件
+-(void)tap:(UIGestureRecognizer *)tap
+{
+    UIImageView *imageView = (UIImageView *)tap.view;
+    
+    NSMutableArray *mjPhotoArr = [NSMutableArray array];
+    
+    for (int i = 0; i < self.photos.count; i++) {
+        MJPhoto *newPhoto = [[MJPhoto alloc]init];
+        
+        NSDictionary *imageUrl = _photos[i];
+        
+        NSString *urlStr = imageUrl[@"thumbnail_pic"];
+        
+        NSString *clearImage = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        
+        NSURL *url = [NSURL URLWithString:clearImage];
+        newPhoto.url = url;
+        
+        newPhoto.index = i;
+        
+        [mjPhotoArr addObject:newPhoto];
+        
+    }
+    
+    
+    //创建图片浏览器
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc]init];
+    browser.currentPhotoIndex = imageView.tag;
+    browser.photos = mjPhotoArr;
+    
+    [browser show];
+    
+
 }
 
 //为photos设置图片
@@ -67,18 +112,16 @@
         UIImageView *imageView = self.photosArr[i];
         
         if (i < _photos.count ) {
-            NSLog(@"photos[i]====%@",photos[i]);
-            
-            NSDictionary *imageUrl = photos[i];
-            NSString *urlStr = imageUrl[@"thumbnail_pic"];
             
             imageView.hidden = NO;
             
-            NSString *clearImage = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail_pic" withString:@""];
+            NSLog(@"photos[i]====%@",photos[i]);
             
-            NSURL *url = [NSURL URLWithString:clearImage];
+            NSDictionary *imageUrl = photos[i];
             
-            [imageView sd_setImageWithURL:url];
+            NSString *urlStr = imageUrl[@"thumbnail_pic"];
+            
+            [imageView sd_setImageWithURL:urlStr];
         }else
         {
             imageView.hidden = YES;

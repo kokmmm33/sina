@@ -7,7 +7,7 @@
 //
 
 #import "CJTabbarViewController.h"
-
+#import "CJComposeViewController.h"
 #import "CJProFileViewController.h"
 #import "CJMessageViewController.h"
 #import "CJMainViewController.h"
@@ -112,10 +112,22 @@
     [self addChildViewController:nav];
 }
 
+#pragma mark - ---tabBarDelegate-----
+
 -(void)tabBar:(CJTabBar *)tabBar didClickBarButton:(NSInteger)index
 {
 //    NSLog(@"%s",__func__);
     self.selectedIndex = index;
+}
+
+-(void)tabBar:(CJTabBar *)tabBar didClickPlusButton:(UIButton *)plusButton
+{
+    CJComposeViewController *composeVC = [[CJComposeViewController alloc]init];
+    
+    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:composeVC];
+    [self presentViewController:navigationVC animated:YES completion:nil];
+
+
 }
 /*
 #pragma mark - Navigation

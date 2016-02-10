@@ -30,11 +30,13 @@ static CJAccount *_acount;
  */
 +(CJAccount *)acount
 {
+    
     if (_acount == nil) {
+        
         _acount = [NSKeyedUnarchiver unarchiveObjectWithFile:AccountFileName];
         
         if ([[NSDate date] compare:_acount.expires_date] == NSOrderedDescending ) {
-            return nil;
+            NSLog(@"============您的账号已过期");
         }
     }
     

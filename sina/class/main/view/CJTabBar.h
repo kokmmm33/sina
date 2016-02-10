@@ -19,6 +19,8 @@
 
 -(void)tabBar:(CJTabBar *)tabBar didClickBarButton:(NSInteger)index;
 
+-(void)tabBar:(CJTabBar *)tabBar didClickPlusButton:(UIButton *)plusButton;
+
 @end
 
 

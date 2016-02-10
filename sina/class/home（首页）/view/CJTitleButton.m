@@ -18,6 +18,12 @@
 {
     
     if (self = [super initWithFrame:frame]) {
+
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        
+//        [self setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, self.imageView.w)];
+//        [self setImageEdgeInsets:UIEdgeInsetsMake(0, self.titleLabel.w, 0, 10)];
+
         
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
@@ -31,21 +37,21 @@
     return self;
 }
 
--(void)layoutSubviews
-{
-    NSLog(@"%s",__func__);
-    
-    [super layoutSubviews];
-    if (self.currentImage == nil)
-        return;
-    
-    NSLog(@"99999999*--%fd----%f",self.titleLabel.x,self.imageView.x);
-    self.titleLabel.x = self.imageView.x;
-    
-    self.imageView.x = CGRectGetMaxX(self.titleLabel.frame);
-    
-
-}
+//-(void)layoutSubviews
+//{
+//    NSLog(@"%s",__func__);
+//    
+//    [super layoutSubviews];
+//    
+//    if (self.currentImage == nil)
+//        return;
+//    
+//    self.titleLabel.x = self.imageView.x;
+//    
+//    self.imageView.x = CGRectGetMaxX(self.titleLabel.frame);
+//    
+//
+//}
 
 -(void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state
 {

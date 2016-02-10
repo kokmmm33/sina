@@ -73,7 +73,7 @@
     
     
     _nameLable.text = _StatusCellItem.status.user.screen_name;
-    _nameLable.font = FONT_16;
+    _nameLable.font = FONT_14;
     
     if (_StatusCellItem.status.user.vip) {
         
@@ -82,6 +82,8 @@
         NSString *vipLv = [NSString stringWithFormat:@"common_icon_membership_level%d",_StatusCellItem.status.user.mbrank];
         
          _vipImageView.image = [UIImage imageNamed:vipLv];
+    }else{
+        _nameLable.textColor = [UIColor darkTextColor];
     }
     
     

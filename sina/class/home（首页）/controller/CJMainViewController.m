@@ -31,6 +31,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIImage+CZRenderImage.h"
 #import "CJUserTools.h"
+#import "SDWebImageManager.h"
 
 
 @interface CJMainViewController ()<CJCoverDelegate>
@@ -154,9 +155,9 @@
 -(void)setNavigationBar
 {
     
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highLightImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(leftBTClick) forControlEvent:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_friendsearch"] highLightImage:[UIImage imageNamed:@"navigationbar_friendsearch_highlighted"] target:self action:@selector(leftBTClick) forControlEvent:UIControlEventTouchUpInside title:nil];
     
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_pop"] highLightImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(rightBTClick) forControlEvent:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_pop"] highLightImage:[UIImage imageNamed:@"navigationbar_pop_highlighted"] target:self action:@selector(rightBTClick) forControlEvent:UIControlEventTouchUpInside title:nil];
     
     self.navigationItem.titleView = self.titleTN;
 }
@@ -173,13 +174,14 @@
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
-    
-    
+
     [titleBT addTarget: self action:@selector(titleBTNClick:) forControlEvents:UIControlEventTouchUpInside];
 //    [titleBT setBackgroundImage:[UIImage imageWithStrectchable:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
 //    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
 //    
 //    [titleBT setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
+    
+
     
     
     return titleBT;
@@ -269,6 +271,17 @@
 {
     CJStatusCellItem *item = self.statusItems[indexPath.row];
     return item.cellHeight;
+
+}
+
+
+-(void)didReceiveMemoryWarning
+{
+    SDWebImageManager *mgr = [SDWebImageManager sharedManager];
+    
+    [mgr cancelAll];
+    
+    [mgr.imageCache clearMemory];
 
 }
 @end

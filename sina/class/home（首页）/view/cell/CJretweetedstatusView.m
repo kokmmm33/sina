@@ -78,7 +78,7 @@
     NSString *str = _StatusCellItem.status.retweeted_status.user.screen_name;
     NSString *nameStr = [NSString stringWithFormat:@"@%@",str];
     _nameLable.text = nameStr;
-    _nameLable.font = FONT_16;
+    _nameLable.font = FONT_14;
     _nameLable.textColor = [UIColor blueColor];
     
     

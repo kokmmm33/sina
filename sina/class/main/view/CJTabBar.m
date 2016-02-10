@@ -42,6 +42,8 @@
         [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
         
+        [btn addTarget:self action:@selector(didPlusBTNClick) forControlEvents:UIControlEventTouchUpInside];
+        
         [btn sizeToFit];
         
         [self addSubview:btn];
@@ -50,6 +52,15 @@
     return _plusBTN;
 }
 
+//加号按钮点击事件
+
+-(void)didPlusBTNClick
+{
+    if ([_delegate respondsToSelector:@selector(tabBar:didClickPlusButton:)]) {
+        [_delegate tabBar:self didClickPlusButton:self.plusBTN];
+    }
+
+}
 
 -(void)setItems:(NSArray *)items
 {

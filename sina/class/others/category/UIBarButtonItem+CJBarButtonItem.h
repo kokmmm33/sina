@@ -10,6 +10,7 @@
 
 @interface UIBarButtonItem (CJBarButtonItem)
 
-+(UIBarButtonItem *)barButtonWithImage:(UIImage *)image highLightImage:(UIImage *)LightImage target:(id)target action:(SEL)action forControlEvent:(UIControlEvents)UIControlEvent;
++(UIBarButtonItem *)barButtonWithImage:(UIImage *)image highLightImage:(UIImage *)LightImage target:(id)target action:(SEL)action forControlEvent:(UIControlEvents)UIControlEvent title:(NSString *)title;
+
 
 @end

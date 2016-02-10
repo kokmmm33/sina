@@ -93,7 +93,7 @@
     _originalSourceFrame = (CGRect){{sourcex,sourcey},sourceSize};
     
     CGFloat textx = margin;
-    CGFloat texty = CGRectGetMaxY(_originalSourceFrame);
+    CGFloat texty = CGRectGetMaxY(_originalSourceFrame) + margin;
     CGFloat textw = ScreenWidth - margin * 2;
     CGSize textSize = [_status.text sizeWithFont:FONT_15 constrainedToSize:CGSizeMake(textw, MAXFLOAT)];
     _originalTextFrame = (CGRect){{textx,texty},textSize};
@@ -118,13 +118,14 @@
 
 }
 
-
+#pragma mark --设计转发微博----
 -(void)serUpretWeetedStatus
 {
     //微博昵称
     CGFloat namex = 0;
     CGFloat namey = margin;
-    CGSize nameSize = [_status.retweeted_status.user.screen_name sizeWithAttributes:@{NSFontAttributeName:FONT_16}];
+    NSString *nameStr = [NSString stringWithFormat:@"@%@",_status.retweeted_status.user.screen_name];
+    CGSize nameSize = [nameStr sizeWithAttributes:@{NSFontAttributeName:FONT_16}];
     _retweetNameFrame = (CGRect){{namex,namey},nameSize};
 
     //微博内容

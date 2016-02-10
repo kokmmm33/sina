@@ -10,9 +10,11 @@
 
 @implementation UIBarButtonItem (CJBarButtonItem)
 
-+(UIBarButtonItem *)barButtonWithImage:(UIImage *)image highLightImage:(UIImage *)LightImage target:(id)target action:(SEL)action forControlEvent:(UIControlEvents)UIControlEvent
++(UIBarButtonItem *)barButtonWithImage:(UIImage *)image highLightImage:(UIImage *)LightImage target:(id)target action:(SEL)action forControlEvent:(UIControlEvents)UIControlEvent title:(NSString *)title
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [button setTitle:title forState:UIControlStateNormal];
     
     [button setImage:image forState:UIControlStateNormal];
     
@@ -20,12 +22,10 @@
     
     [button addTarget:target action:action forControlEvents:UIControlEvent];
     
+    
     [button sizeToFit];
     
     return [[UIBarButtonItem alloc]initWithCustomView:button];
-    
-
-
 }
 
 @end

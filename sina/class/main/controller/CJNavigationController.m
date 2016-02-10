@@ -24,8 +24,11 @@
 +(void)initialize
 {
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
+
+        NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+        attributes[NSForegroundColorAttributeName] = [UIColor orangeColor];
     
-    [item setTintColor:[UIColor orangeColor]];
+    [item setTitleTextAttributes:attributes forState:UIControlStateHighlighted];
 
 }
 
@@ -55,8 +58,8 @@
     
     if (self.childViewControllers.count)
     {
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_back"] highLightImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(backButtonClick) forControlEvent:UIControlEventTouchUpInside];
-        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_more"] highLightImage:[UIImage imageNamed:@"navigationbar_more_highlighted"] target:self action:@selector(moreButtonClick) forControlEvent:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_back"] highLightImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(backButtonClick) forControlEvent:UIControlEventTouchUpInside title:nil];
+        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonWithImage:[UIImage imageNamed:@"navigationbar_more"] highLightImage:[UIImage imageNamed:@"navigationbar_more_highlighted"] target:self action:@selector(moreButtonClick) forControlEvent:UIControlEventTouchUpInside title:nil];
     }
     
     [super pushViewController:viewController animated:animated];
