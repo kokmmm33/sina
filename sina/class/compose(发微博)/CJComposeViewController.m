@@ -12,15 +12,28 @@
 
 #import "UIButton+CreateNewButton.h"
 #import "UIView+view.h"
+#import "CJTextView.h"
 
 
 @interface CJComposeViewController ()<composeToolsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate>
-@property(nonatomic,weak)UITextView *textView;
+@property(nonatomic,weak)CJTextView *textView;
+
+@property(nonatomic,weak)UIView *pleaseHolder;
 
 @property(nonatomic,weak)CJComposeToolsView *toolsView;
 @end
 
 @implementation CJComposeViewController
+
+-(UIView *)pleaseHolder
+{
+    if (_pleaseHolder == nil) {
+        UIView *pleaseHolder = [[UIView alloc]init];
+        [self.view addSubview:pleaseHolder];
+        _pleaseHolder = pleaseHolder;
+    }
+    return _pleaseHolder;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,9 +76,12 @@
 {
     if (_textView.text.length != 0) {
         self.navigationItem.rightBarButtonItem.enabled = YES;
+        _textView.hidePleaseHolder = YES;
     }else
     {
         self.navigationItem.rightBarButtonItem.enabled = NO;
+        _textView.hidePleaseHolder = NO;
+        
     }
     
 
@@ -93,7 +109,9 @@
 -(void)addSubViews
 {
     //输入
-    UITextView *textView = [[UITextView alloc]initWithFrame:self.view.bounds];
+    CJTextView *textView = [[CJTextView alloc]initWithFrame:self.view.bounds];
+    
+    textView.pleaseHolderText = @"分享新鲜事...";
     
     textView.font = [UIFont systemFontOfSize:18];
     
