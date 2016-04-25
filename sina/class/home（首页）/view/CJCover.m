@@ -23,7 +23,7 @@
     return cover;
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self removeFromSuperview];
     
@@ -31,4 +31,13 @@
         [_delegate DidClickedCover:self];
     }
 }
+
+//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    [self removeFromSuperview];
+//    
+//    if ([_delegate respondsToSelector:@selector(DidClickedCover:)]) {
+//        [_delegate DidClickedCover:self];
+//    }
+//}
 @end

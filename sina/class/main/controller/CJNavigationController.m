@@ -29,11 +29,7 @@
         attributes[NSForegroundColorAttributeName] = [UIColor orangeColor];
     
     [item setTitleTextAttributes:attributes forState:UIControlStateHighlighted];
-
 }
-
-
-
 
 
 - (void)viewDidLoad {

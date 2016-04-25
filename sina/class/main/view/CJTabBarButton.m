@@ -49,7 +49,7 @@
 
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     [self setTitle:_item.title forState:UIControlStateNormal];
     
@@ -57,6 +57,15 @@
     
     [self setImage:_item.selectedImage forState:UIControlStateSelected];
 }
+
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+//{
+//    [self setTitle:_item.title forState:UIControlStateNormal];
+//    
+//    [self setImage:_item.image forState:UIControlStateNormal];
+//    
+//    [self setImage:_item.selectedImage forState:UIControlStateSelected];
+//}
 
 -(void)layoutSubviews
 {

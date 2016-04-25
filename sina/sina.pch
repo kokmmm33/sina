@@ -20,6 +20,9 @@
 #define FONT_16     [UIFont systemFontOfSize:16]
 #define FONT_15     [UIFont systemFontOfSize:15]
 #define FONT_14     [UIFont systemFontOfSize:14]
+#define APP_KEY  2188301667
+#define App_Secret cd9a005d94e37c0480fb9dcdb2aacb76
+#define REDIRECT_URL   https://github.com/
 
 #import "UIView+view.h"
 #endif /* sina_pch */

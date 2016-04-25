@@ -27,6 +27,8 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //判断是否登陆有效账号
     
+    NSLog(@"%@",NSLocalizedString(@"Hello, world",nil));
+    
     CJAccount *account = [CJAcountTools acount];
     
     if (account)

@@ -22,8 +22,6 @@
 @end
 
 @implementation CJOAuthController
-#define client_id          3938897265
-#define redirect_uri       https://www.baidu.com
 
 
 - (void)viewDidLoad {
@@ -31,7 +29,7 @@
     // Do any additional setup after loading the view.
     UIWebView *webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=3008994865&redirect_uri=https://github.com/"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%ld&redirect_uri=https://github.com/",APP_KEY]];
     
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -62,6 +60,12 @@
         return NO;
     }
     return YES;
+
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"webView=%@",error);
 
 }
 

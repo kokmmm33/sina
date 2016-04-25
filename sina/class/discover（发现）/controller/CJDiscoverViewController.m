@@ -47,10 +47,13 @@
     
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.seachBar resignFirstResponder];
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

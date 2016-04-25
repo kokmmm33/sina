@@ -12,6 +12,7 @@
 #import "CJMessageViewController.h"
 #import "CJMainViewController.h"
 #import "CJDiscoverViewController.h"
+#import "CJFunctionController.h"
 
 #import "UIImage+CZRenderImage.h"
 
@@ -122,10 +123,10 @@
 
 -(void)tabBar:(CJTabBar *)tabBar didClickPlusButton:(UIButton *)plusButton
 {
-    CJComposeViewController *composeVC = [[CJComposeViewController alloc]init];
+
     
-    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:composeVC];
-    [self presentViewController:navigationVC animated:YES completion:nil];
+    CJFunctionController *functionVC = [[CJFunctionController alloc]init];
+    [self presentViewController:functionVC animated:NO completion:nil];
 
 
 }

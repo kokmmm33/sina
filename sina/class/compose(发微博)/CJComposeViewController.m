@@ -166,12 +166,13 @@
 }
 
 #pragma mark -----PickerControllerDelegate-----
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo
-{
-    NSLog(@"%s",__func__);
-    
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo
+//{
+//    NSLog(@"%s",__func__);
+//    
+//
+//}
 
-}
 
 
 - (void)didReceiveMemoryWarning {

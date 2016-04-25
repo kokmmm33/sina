@@ -53,8 +53,8 @@ static CJAccount *_acount;
      parameters[@"redirect_uri"] = @"https://github.com/";
      */
     CJOAuthParameter *parameter = [[CJOAuthParameter alloc]init];
-    parameter.client_id = @"3008994865";
-    parameter.client_secret = @"679803b998bf148787e7a2ca53cf9b1e";
+    parameter.client_id = @"2188301667";
+    parameter.client_secret = @"cd9a005d94e37c0480fb9dcdb2aacb76";
     parameter.grant_type = @"authorization_code";
     parameter.code = code;
     parameter.redirect_uri = @"https://github.com/";
